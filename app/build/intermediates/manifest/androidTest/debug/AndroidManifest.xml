@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.infrastructure.lib.test" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="15" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:functionalTest="false"
+        android:handleProfiling="false"
+        android:label="Tests for cn.infrastructure.lib.test"
+        android:targetPackage="cn.infrastructure.lib.test" />
+
+    <application android:supportsRtl="true" >
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name="cn.infrastructure.utils.recovery.core.RecoveryActivity"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:process=":recover"
+            android:screenOrientation="portrait"
+            android:theme="@style/RecoveryTheme.NoActionBar" >
+        </activity>
+
+        <service
+            android:name="cn.infrastructure.utils.recovery.core.RecoveryService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":recover" >
+        </service>
+    </application>
+
+</manifest>

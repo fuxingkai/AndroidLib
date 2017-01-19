@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent_four">#EBEBEB</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="header_bg">#F5F5F5</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_ffffff">#FFFFFF</color>
+    <color name="color_ff5400">#FF5400</color>
+    <!-- 半透明 -->
+    <color name="color_translucent_half">#e0000000</color>
+
+    <color name="color_translucent_half_60">#66000000</color>
+    <!-- 透明 -->
+    <color name="color_translucent">#00000000</color>
+    <!-- 加载框背景颜色 -->
+    <color name="color_loading_dialog_bg">#88000000</color>
+
+    <!-- Recovery -->
+    <color name="recoveryColorPrimary">#F44336</color>
+    <color name="recoveryColorPrimaryDark">#D32F2F</color>
+    <color name="recoveryColorAccent">#BDBDBD</color>
+    <color name="recoveryTextColor">#FFFFFF</color>
+
+</resources>

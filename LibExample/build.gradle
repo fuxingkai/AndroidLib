@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "cn.jufuns.lib.example"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+//    productFlavors {
+//        mock {
+//            applicationIdSuffix = ".mock"
+//        }
+//    }
+
+    // Remove mockRelease as it's not needed.
+//    android.variantFilter { variant ->
+//        if(variant.buildType.name.equals('release')
+//                && variant.getFlavors().get(0).name.equals('mock')) {
+//            variant.setIgnore(true);
+//        }
+//    }
+
+}
+
+dependencies {
+    compile project(':app')
+    compile 'com.jakewharton:butterknife:8.2.1'
+    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+    compile 'com.google.dagger:dagger:2.4'
+    apt 'com.google.dagger:dagger-compiler:2.4'
+//    compile "cn.jufuns:aptpreferences:$rootProject.ext.aptpreferencesVersion"
+//    apt "cn.jufuns:aptpreferences-compiler:$rootProject.ext.aptpreferencescompilerVersion"
+}
