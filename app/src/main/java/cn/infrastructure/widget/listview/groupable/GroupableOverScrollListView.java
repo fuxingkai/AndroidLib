@@ -564,7 +564,7 @@ public class GroupableOverScrollListView extends ExpandableListView {
                         mOnLoadMoreListener.onLoadMore();
                     }
                 } else if (scrollY > 0) {
-                    mFooterView.onCanceFrankulling();
+                    mFooterView.onCancelPulling();
                 }
             }
 
@@ -760,7 +760,7 @@ public class GroupableOverScrollListView extends ExpandableListView {
                     mFooterView.onReachBelowRefreshThreshold();
                 }
             } else {
-                mFooterView.onCanceFrankulling();
+                mFooterView.onCancelPulling();
             }
         }
     }

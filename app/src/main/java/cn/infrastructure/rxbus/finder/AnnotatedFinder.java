@@ -147,7 +147,7 @@ public final class AnnotatedFinder {
     /**
      * This implementation finds all methods marked with a {@link Produce} annotation.
      */
-    static Map<EventType, ProducerEvent> findAlFrankroducers(Object listener) {
+    static Map<EventType, ProducerEvent> findAllProducers(Object listener) {
         final Class<?> listenerClass = listener.getClass();
         Map<EventType, ProducerEvent> producersInMethod = new HashMap<>();
 

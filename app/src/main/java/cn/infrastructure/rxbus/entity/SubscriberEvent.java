@@ -47,13 +47,13 @@ public class SubscriberEvent extends Event {
 
     public SubscriberEvent(Object target, Method method, EventThread thread) {
         if (target == null) {
-            throw new NulFrankointerException("SubscriberEvent target cannot be null.");
+            throw new NullPointerException("SubscriberEvent target cannot be null.");
         }
         if (method == null) {
-            throw new NulFrankointerException("SubscriberEvent method cannot be null.");
+            throw new NullPointerException("SubscriberEvent method cannot be null.");
         }
         if (thread == null) {
-            throw new NulFrankointerException("SubscriberEvent thread cannot be null.");
+            throw new NullPointerException("SubscriberEvent thread cannot be null.");
         }
 
         this.target = target;

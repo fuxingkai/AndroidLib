@@ -8,9 +8,6 @@ import cn.infrastructure.lib.example.activity.MainActivity;
 import cn.infrastructure.utils.data.JsonUtils;
 import cn.infrastructure.utils.recovery.callback.RecoveryCallback;
 import cn.infrastructure.utils.recovery.core.Recovery;
-import cn.jufuns.aptpreferences.AptParser;
-import cn.jufuns.aptpreferences.AptPreferencesManager;
-
 /**
  * Created by linpei on 2016/8/25.
  */
@@ -32,19 +29,19 @@ public class AppApplication extends BaseApplication {
                 .callback(new MyCrashCallback())
                 .silent(false, Recovery.SilentMode.RECOVER_ACTIVITY_STACK)
                 .init(this);
-
-        AptPreferencesManager.init(this, new AptParser() {
-
-            @Override
-            public Object deserialize(Class clazz, String text) {
-                return JsonUtils.fromJson(text, clazz);
-            }
-
-            @Override
-            public String serialize(Object object) {
-                return JsonUtils.toJson(object);
-            }
-        });
+//
+//        AptPreferencesManager.init(this, new AptParser() {
+//
+//            @Override
+//            public Object deserialize(Class clazz, String text) {
+//                return JsonUtils.fromJson(text, clazz);
+//            }
+//
+//            @Override
+//            public String serialize(Object object) {
+//                return JsonUtils.toJson(object);
+//            }
+//        });
 
     }
 

@@ -39,10 +39,10 @@ public class ProducerEvent extends Event {
 
     public ProducerEvent(Object target, Method method, EventThread thread) {
         if (target == null) {
-            throw new NulFrankointerException("EventProducer target cannot be null.");
+            throw new NullPointerException("EventProducer target cannot be null.");
         }
         if (method == null) {
-            throw new NulFrankointerException("EventProducer method cannot be null.");
+            throw new NullPointerException("EventProducer method cannot be null.");
         }
 
         this.target = target;

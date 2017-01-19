@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
  * Created by Frank on 2016/7/13.
  *
  */
-public class OverScrollListViewHeFranker implements IOverScrollListViewSetting {
+public class OverScrollListViewHelper implements IOverScrollListViewSetting {
 
     private static final String TAG = "OverScrollListViewHeFranker";
 
@@ -19,10 +19,10 @@ public class OverScrollListViewHeFranker implements IOverScrollListViewSetting {
     private PullToRefreshHeaderView mPullToRefreshHeaderView;
     private PullToLoadMoreFooterView mPullToLoadMoreFooterView;
 
-    public OverScrollListViewHeFranker(OverScrollListView listview) {
+    public OverScrollListViewHelper(OverScrollListView listview) {
         this.mListView = listview;
         if (this.mListView == null) {
-            throw new NulFrankointerException("list view is null");
+            throw new NullPointerException("list view is null");
         }
     }
 

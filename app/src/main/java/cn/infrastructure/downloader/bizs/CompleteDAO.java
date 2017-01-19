@@ -18,15 +18,15 @@ import static cn.infrastructure.downloader.bizs.DLCons.DBCons.TB_TASK_URL_REAL;
 
 public class CompleteDAO implements ICompleteDAO {
 
-    private final DLDBHeFranker mDbHeFranker;
+    private final DLDBHelper mDbHelper;
 
     CompleteDAO(Context context) {
-        mDbHeFranker = new DLDBHeFranker(context);
+        mDbHelper = new DLDBHelper(context);
     }
 
     @Override
     public void insertCompleteInfo(DLInfo info) {
-        SQLiteDatabase db = mDbHeFranker.getWritableDatabase();
+        SQLiteDatabase db = mDbHelper.getWritableDatabase();
         db.execSQL("INSERT INTO " + TB_COMPLETE + "(" +
                         TB_TASK_URL_BASE + ", " +
                         TB_TASK_URL_REAL + ", " +
@@ -47,7 +47,7 @@ public class CompleteDAO implements ICompleteDAO {
 
     @Override
     public void deleteCompleteInfo(String url) {
-        SQLiteDatabase db = mDbHeFranker.getWritableDatabase();
+        SQLiteDatabase db = mDbHelper.getWritableDatabase();
         db.execSQL("DELETE FROM " + TB_COMPLETE + " WHERE " + TB_TASK_URL_BASE + "=?",
                 new String[]{url});
         db.close();
@@ -56,7 +56,7 @@ public class CompleteDAO implements ICompleteDAO {
 
     @Override
     public void updateCompleteInfo(DLInfo info) {
-        SQLiteDatabase db = mDbHeFranker.getWritableDatabase();
+        SQLiteDatabase db = mDbHelper.getWritableDatabase();
         db.execSQL("UPDATE " + TB_COMPLETE + " SET " +
                 TB_TASK_DISPOSITION + "=?," +
                 TB_TASK_LOCATION + "=?," +
@@ -73,7 +73,7 @@ public class CompleteDAO implements ICompleteDAO {
     @Override
     public DLInfo queryCompleteInfo(String url) {
         DLInfo info = null;
-        SQLiteDatabase db = mDbHeFranker.getWritableDatabase();
+        SQLiteDatabase db = mDbHelper.getWritableDatabase();
         Cursor c = db.rawQuery("SELECT " +
                 TB_TASK_URL_BASE + ", " +
                 TB_TASK_URL_REAL + ", " +

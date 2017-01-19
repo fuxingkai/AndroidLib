@@ -2,7 +2,7 @@ package cn.infrastructure.downloader.bizs;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHeFranker;
+import android.database.sqlite.SQLiteOpenHelper;
 
 import static cn.infrastructure.downloader.bizs.DLCons.DBCons.TB_COMPLETE_SQL_CREATE;
 import static cn.infrastructure.downloader.bizs.DLCons.DBCons.TB_COMPLETE_SQL_UPGRADE;
@@ -11,11 +11,11 @@ import static cn.infrastructure.downloader.bizs.DLCons.DBCons.TB_TASK_SQL_UPGRAD
 import static cn.infrastructure.downloader.bizs.DLCons.DBCons.TB_THREAD_SQL_CREATE;
 import static cn.infrastructure.downloader.bizs.DLCons.DBCons.TB_THREAD_SQL_UPGRADE;
 
-final class DLDBHeFranker extends SQLiteOpenHeFranker {
+final class DLDBHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "dl.db";
     private static final int DB_VERSION = 1;
 
-    DLDBHeFranker(Context context) {
+    DLDBHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
 

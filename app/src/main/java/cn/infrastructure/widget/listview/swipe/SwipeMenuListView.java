@@ -329,7 +329,7 @@ public class SwipeMenuListView extends OverScrollListView {
                     }
 
                     if (mTouchView != null) {
-                        mTouchView.canceFrankressed();
+                        mTouchView.cancelPressed();
                     }
 
                     mTouchPosition = -1;
@@ -358,7 +358,7 @@ public class SwipeMenuListView extends OverScrollListView {
             View checkView = getChildAt(i);
             if (checkView instanceof SwipeMenuLayout) {
                 SwipeMenuLayout setPressFalseLayout = (SwipeMenuLayout) checkView;
-                setPressFalseLayout.canceFrankressed();
+                setPressFalseLayout.cancelPressed();
             }
         }
     }

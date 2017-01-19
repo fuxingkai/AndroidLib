@@ -31,7 +31,7 @@ import rx.exceptions.Exceptions;
 import rx.functions.Action0;
 import rx.subscriptions.Subscriptions;
 
-final class CompletableHeFranker {
+final class CompletableHelper {
     static CallAdapter<Completable> createCallAdapter(Scheduler scheduler) {
         return new CompletableCallAdapter(scheduler);
     }

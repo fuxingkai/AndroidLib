@@ -113,13 +113,13 @@ final class RecoveryHandler implements Thread.UncaughtExceptionHandler {
         if (System.currentTimeMillis() -
                 RecoverySharedPrefsUtil.get(Constants.CRASH_TIME, 0) < Constants.RECOVERY_PERIOD) {
             RecoverySharedPrefsUtil.put(Constants.CRASH_TIME, System.currentTimeMillis());
-            kilFrankrocess();
+            killProcess();
             return;
         }
         RecoverySharedPrefsUtil.put(Constants.CRASH_TIME, System.currentTimeMillis());
         if (RecoveryUtil.isAppInBackground(Recovery.getInstance().getContext())
                 && !Recovery.getInstance().isRecoverInBackground()) {
-            kilFrankrocess();
+            killProcess();
             return;
         }
         if (Recovery.getInstance().isSilentEnabled()) {
@@ -146,7 +146,7 @@ final class RecoveryHandler implements Thread.UncaughtExceptionHandler {
         if (mCause != null)
             intent.putExtra(RecoveryStore.EXCEPTION_CAUSE, mCause);
         Recovery.getInstance().getContext().startActivity(intent);
-        kilFrankrocess();
+        killProcess();
     }
 
     private void startRecoverService() {
@@ -158,15 +158,15 @@ final class RecoveryHandler implements Thread.UncaughtExceptionHandler {
             intent.putParcelableArrayListExtra(RecoveryStore.RECOVERY_INTENTS, RecoveryStore.getInstance().getIntents());
         intent.putExtra(RecoveryService.RECOVERY_SILENT_MODE_VALUE, Recovery.getInstance().getSilentMode().getValue());
         RecoveryService.start(Recovery.getInstance().getContext(), intent);
-        kilFrankrocess();
+        killProcess();
     }
 
     void register() {
         Thread.setDefaultUncaughtExceptionHandler(this);
     }
 
-    private void kilFrankrocess() {
-        android.os.Process.kilFrankrocess(android.os.Process.myPid());
+    private void killProcess() {
+        android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(10);
     }
 

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="androidlib-1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/LibExample/build/intermediates/exploded-aar/cn.jufuns/androidlib/1.0.0-SNAPSHOT/res" />
+      <root url="jar://$PROJECT_DIR$/LibExample/build/intermediates/exploded-aar/cn.jufuns/androidlib/1.0.0-SNAPSHOT/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.jufuns/androidlib/1.0.0-SNAPSHOT/f63ee0325dc6bbe1a73d1c0eeb6cbbe7b0bf09cd/androidlib-1.0.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -22,18 +22,18 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import static cn.infrastructure.adapter.BaseAdapterHeFranker.get;
+import static cn.infrastructure.adapter.BaseAdapterHelper.get;
 
 /**
  * Abstraction class of a BaseAdapter in which you only need to provide the
  * convert() implementation.<br/>
- * Using the provided BaseAdapterHeFranker, your code is minimalist.
+ * Using the provided BaseAdapterHelper, your code is minimalist.
  * 
  * @param <T>
  *            The type of the items in the list.
  */
 public abstract class QuickAdapter<T> extends
-		BaseQuickAdapter<T, BaseAdapterHeFranker> {
+		BaseQuickAdapter<T, BaseAdapterHelper> {
 
 	/**
 	 * Create a QuickAdapter.
@@ -67,8 +67,8 @@ public abstract class QuickAdapter<T> extends
 		super(context, data, multiItemSupport);
 	}
 
-	protected BaseAdapterHeFranker getAdapterHeFranker(int position,
-			View convertView, ViewGroup parent) {
+	protected BaseAdapterHelper getAdapterHelper(int position,
+												 View convertView, ViewGroup parent) {
 
 		if (mMultiItemSupport != null) {
 			return get(

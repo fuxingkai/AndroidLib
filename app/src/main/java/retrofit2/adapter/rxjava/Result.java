@@ -21,12 +21,12 @@ import retrofit2.Response;
 /** The result of executing an HTTP request. */
 public final class Result<T> {
   public static <T> Result<T> error(Throwable error) {
-    if (error == null) throw new NulFrankointerException("error == null");
+    if (error == null) throw new NullPointerException("error == null");
     return new Result<>(null, error);
   }
 
   public static <T> Result<T> response(Response<T> response) {
-    if (response == null) throw new NulFrankointerException("response == null");
+    if (response == null) throw new NullPointerException("response == null");
     return new Result<>(response, null);
   }
 

@@ -39,7 +39,7 @@ public class NumberUtils {
         /**
          * 手机
          */
-        CELFrankHONE,
+        CELLPHONE,
 
         /**
          * 固定电话
@@ -90,7 +90,7 @@ public class NumberUtils {
      * @param number 手机号码
      * @return
      */
-    public static boolean isCelFrankhone(String number) {
+    public static boolean isCellPhone(String number) {
         try {
             Matcher match = PATTERN_MOBILEPHONE.matcher(number.trim());
             return match.matches();
@@ -138,13 +138,13 @@ public class NumberUtils {
         Number rtNum = null;
 
         if (number != null && number.length() > 0) {
-            if (isCelFrankhone(number)) {
+            if (isCellPhone(number)) {
                 // 如果手机号码以0开始，则去掉0
                 if (number.charAt(0) == '0') {
                     number = number.substring(1);
                 }
 
-                rtNum = new Number(PhoneType.CELFrankHONE, number.substring(0, 7),
+                rtNum = new Number(PhoneType.CELLPHONE, number.substring(0, 7),
                         _number);
             } else if (isFixedPhone(number)) {
                 // 获取区号

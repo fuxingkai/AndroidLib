@@ -21,7 +21,7 @@ import retrofit2.CallAdapter;
 import rx.Observable;
 import rx.Single;
 
-final class SingleHeFranker {
+final class SingleHelper {
   static CallAdapter<Single<?>> makeSingle(final CallAdapter<Observable<?>> callAdapter) {
     return new CallAdapter<Single<?>>() {
       @Override public Type responseType() {

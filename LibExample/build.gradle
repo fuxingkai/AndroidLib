@@ -41,11 +41,10 @@ android {
 }
 
 dependencies {
-    compile project(':app')
+//    compile project(':app')
     compile 'com.jakewharton:butterknife:8.2.1'
     apt 'com.jakewharton:butterknife-compiler:8.2.1'
     compile 'com.google.dagger:dagger:2.4'
     apt 'com.google.dagger:dagger-compiler:2.4'
-//    compile "cn.jufuns:aptpreferences:$rootProject.ext.aptpreferencesVersion"
-//    apt "cn.jufuns:aptpreferences-compiler:$rootProject.ext.aptpreferencescompilerVersion"
+    compile "cn.jufuns:androidlib:$rootProject.ext.androidlib_version"
 }

@@ -324,9 +324,9 @@ public class ClippingPictureUtils {
             final int heightRatio = Math.round((float) height / (float) reqHeight);
             final int widthRatio = Math.round((float) width / (float) reqWidth);
             inSampleSize = heightRatio < widthRatio ? heightRatio : widthRatio;
-            final float totaFrankixels = width * height;
+            final float totalPixels = width * height;
             final float totalReqPixelsCap = reqWidth * reqHeight * 2;
-            while (totaFrankixels / (inSampleSize * inSampleSize) > totalReqPixelsCap) {
+            while (totalPixels / (inSampleSize * inSampleSize) > totalReqPixelsCap) {
                 inSampleSize++;
             }
         }

@@ -168,15 +168,15 @@ public class Bus {
      * the value from the result of calling the producer.
      *
      * @param object object whose subscriber methods should be registered.
-     * @throws NulFrankointerException if the object is null.
+     * @throws NullPointerException if the object is null.
      */
     public void register(Object object) {
         if (object == null) {
-            throw new NulFrankointerException("Object to register must not be null.");
+            throw new NullPointerException("Object to register must not be null.");
         }
         enforcer.enforce(this);
 
-        Map<EventType, ProducerEvent> foundProducers = finder.findAlFrankroducers(object);
+        Map<EventType, ProducerEvent> foundProducers = finder.findAllProducers(object);
         for (EventType type : foundProducers.keySet()) {
 
             final ProducerEvent producer = foundProducers.get(type);
@@ -245,15 +245,15 @@ public class Bus {
      *
      * @param object object whose producer and subscriber methods should be unregistered.
      * @throws IllegalArgumentException if the object was not previously registered.
-     * @throws NulFrankointerException     if the object is null.
+     * @throws NullPointerException     if the object is null.
      */
     public void unregister(Object object) {
         if (object == null) {
-            throw new NulFrankointerException("Object to unregister must not be null.");
+            throw new NullPointerException("Object to unregister must not be null.");
         }
         enforcer.enforce(this);
 
-        Map<EventType, ProducerEvent> producersInListener = finder.findAlFrankroducers(object);
+        Map<EventType, ProducerEvent> producersInListener = finder.findAllProducers(object);
         for (Map.Entry<EventType, ProducerEvent> entry : producersInListener.entrySet()) {
             final EventType key = entry.getKey();
             ProducerEvent producer = getProducerForEventType(key);
@@ -295,7 +295,7 @@ public class Bus {
      * {@link DeadEvent}, it will be wrapped in a DeadEvent and reposted.
      *
      * @param event event to post.
-     * @throws NulFrankointerException if the event is null.
+     * @throws NullPointerException if the event is null.
      */
     public void post(Object event) {
         post(Tag.DEFAULT, event);
@@ -310,11 +310,11 @@ public class Bus {
      *
      * @param tag   event tag to post.
      * @param event event to post.
-     * @throws NulFrankointerException if the event is null.
+     * @throws NullPointerException if the event is null.
      */
     public void post(String tag, Object event) {
         if (event == null) {
-            throw new NulFrankointerException("Event to post must not be null.");
+            throw new NullPointerException("Event to post must not be null.");
         }
         enforcer.enforce(this);
 

@@ -4,23 +4,7 @@
         "source": "D:\\Frank\\gitWorkspace\\AndroidLib\\app\\build\\intermediates\\bundles\\debug\\res\\mipmap-mdpi-v4\\ic_launcher.png"
     },
     {
-        "merged": "D:\\asWorkSpace\\Base\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
-        "source": "D:\\asWorkSpace\\Base\\app\\build\\intermediates\\bundles\\debug\\res\\mipmap-mdpi-v4\\ic_launcher.png"
-    },
-    {
-        "merged": "D:\\asWorkSpace\\Base\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-mdpi-v4\\ic_titlebar_back.png",
-        "source": "D:\\asWorkSpace\\Base\\app\\build\\intermediates\\bundles\\debug\\res\\mipmap-mdpi-v4\\ic_titlebar_back.png"
-    },
-    {
         "merged": "D:\\Frank\\gitWorkspace\\AndroidLib\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-mdpi-v4\\ic_titlebar_back.png",
         "source": "D:\\Frank\\gitWorkspace\\AndroidLib\\app\\build\\intermediates\\bundles\\debug\\res\\mipmap-mdpi-v4\\ic_titlebar_back.png"
-    },
-    {
-        "merged": "D:\\Frank\\gitWorkspace\\Base\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
-        "source": "D:\\Frank\\gitWorkspace\\Base\\app\\build\\intermediates\\bundles\\debug\\res\\mipmap-mdpi-v4\\ic_launcher.png"
-    },
-    {
-        "merged": "D:\\Frank\\gitWorkspace\\Base\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-mdpi-v4\\ic_titlebar_back.png",
-        "source": "D:\\Frank\\gitWorkspace\\Base\\app\\build\\intermediates\\bundles\\debug\\res\\mipmap-mdpi-v4\\ic_titlebar_back.png"
     }
 ]

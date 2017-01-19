@@ -4,7 +4,7 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.os.Build;
 
-import cn.infrastructure.db.DaoHeFranker;
+import cn.infrastructure.db.DaoHelper;
 import cn.infrastructure.db.entity.CrashLog;
 import cn.infrastructure.utils.DateUtils;
 import cn.infrastructure.utils.NetWorkUtils;
@@ -52,9 +52,9 @@ public class SaveCrashInfoUtils {
 
             crashLog.setMemoryInfo(memoryInfo);
 
-            DaoHeFranker.getInstance(ctx).getCrashLogDao().insert(crashLog);
+            DaoHelper.getInstance(ctx).getCrashLogDao().insert(crashLog);
 
-            QLog.json(JsonUtils.toJson(DaoHeFranker.getInstance(ctx).getCrashLogDao().queryBuilder().build().unique()));
+            QLog.json(JsonUtils.toJson(DaoHelper.getInstance(ctx).getCrashLogDao().queryBuilder().build().unique()));
         } catch (Exception e) {
             e.printStackTrace();
         }

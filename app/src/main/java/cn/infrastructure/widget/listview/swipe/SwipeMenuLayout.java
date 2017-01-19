@@ -329,7 +329,7 @@ public class SwipeMenuLayout extends FrameLayout {
 
 				@Override
 				public void run() {
-					canceFrankressed();
+					cancelPressed();
 					if (mOnSwipeItemClickListener != null) {
 						mOnSwipeItemClickListener.onContentItemClick(mPosition);
 					}
@@ -384,7 +384,7 @@ public class SwipeMenuLayout extends FrameLayout {
 				dis += mMenuView.getWidth();
 			}
 
-			canceFrankressed();
+			cancelPressed();
 
 			swipe(dis);
 
@@ -395,7 +395,7 @@ public class SwipeMenuLayout extends FrameLayout {
 			mActionUpTime = System.currentTimeMillis();
 
 			mCancelTapConfirm = false;
-			canceFrankressed();
+			cancelPressed();
 
 			if (mMenuView != null) {
 				if (mIsFling
@@ -469,7 +469,7 @@ public class SwipeMenuLayout extends FrameLayout {
 		}
 	}
 
-	/* package */void canceFrankressed() {
+	/* package */void cancelPressed() {
 
 		if (!mPressedRunnableRemoved) {
 			mPressedRunnableRemoved = true;

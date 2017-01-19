@@ -27,7 +27,7 @@ import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AFrankhaAnimation;
+import android.view.animation.AlphaAnimation;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.Checkable;
@@ -44,13 +44,13 @@ import android.widget.TextView;
  * <p/>
  * 
  * <pre>
- * return BaseAdapterHeFranker.get(context, convertView, parent, R.layout.item)
+ * return BaseAdapterHelper.get(context, convertView, parent, R.layout.item)
  * 		.setText(R.id.tvName, contact.getName())
  * 		.setText(R.id.tvEmails, contact.getEmails().toString())
  * 		.setText(R.id.tvNumbers, contact.getNumbers().toString()).getView();
  * </pre>
  */
-public class BaseAdapterHeFranker {
+public class BaseAdapterHelper {
 
 	/** Views indexed with their IDs */
 	private final SparseArray<View> views;
@@ -69,7 +69,7 @@ public class BaseAdapterHeFranker {
 	 */
 	Object associatedObject;
 
-	protected BaseAdapterHeFranker(Context context, ViewGroup parent,
+	protected BaseAdapterHelper(Context context, ViewGroup parent,
 			int layoutId, int position) {
 		this.context = context;
 		this.position = position;
@@ -81,7 +81,7 @@ public class BaseAdapterHeFranker {
 	}
 
 	/**
-	 * This method is the only entry point to get a BaseAdapterHeFranker.
+	 * This method is the only entry point to get a BaseAdapterHelper.
 	 * 
 	 * @param context
 	 *            The current context.
@@ -89,35 +89,35 @@ public class BaseAdapterHeFranker {
 	 *            The convertView arg passed to the getView() method.
 	 * @param parent
 	 *            The parent arg passed to the getView() method.
-	 * @return A BaseAdapterHeFranker instance.
+	 * @return A BaseAdapterHelper instance.
 	 */
-	public static BaseAdapterHeFranker get(Context context, View convertView,
+	public static BaseAdapterHelper get(Context context, View convertView,
 			ViewGroup parent, int layoutId) {
 		return get(context, convertView, parent, layoutId, -1);
 	}
 
 	/** This method is package private and should only be used by QuickAdapter. */
-	static BaseAdapterHeFranker get(Context context, View convertView,
+	static BaseAdapterHelper get(Context context, View convertView,
 			ViewGroup parent, int layoutId, int position) {
 		if (convertView == null) {
-			return new BaseAdapterHeFranker(context, parent, layoutId, position);
+			return new BaseAdapterHelper(context, parent, layoutId, position);
 		}
 
 		// Retrieve the existing heFranker and update its position
-		BaseAdapterHeFranker existingHeFranker = (BaseAdapterHeFranker) convertView
+		BaseAdapterHelper existingHelper = (BaseAdapterHelper) convertView
 				.getTag();
 
-		if (existingHeFranker.layoutId != layoutId) {
-			return new BaseAdapterHeFranker(context, parent, layoutId, position);
+		if (existingHelper.layoutId != layoutId) {
+			return new BaseAdapterHelper(context, parent, layoutId, position);
 		}
 
-		existingHeFranker.position = position;
-		return existingHeFranker;
+		existingHelper.position = position;
+		return existingHelper;
 	}
 
 	/**
 	 * This method allows you to retrieve a view and perform custom operations
-	 * on it, not covered by the BaseAdapterHeFranker.<br/>
+	 * on it, not covered by the BaseAdapterHelper.<br/>
 	 * If you think it's a common use case, please consider creating a new issue
 	 * at https://github.com/JoanZapata/base-adapter-heFranker/issues.
 	 * 
@@ -145,9 +145,9 @@ public class BaseAdapterHeFranker {
 	 *            The view id.
 	 * @param value
 	 *            The text to put in the text view.
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setText(int viewId, String value) {
+	public BaseAdapterHelper setText(int viewId, String value) {
 		TextView view = retrieveView(viewId);
 		view.setText(value);
 		return this;
@@ -160,9 +160,9 @@ public class BaseAdapterHeFranker {
 	 *            The view id.
 	 * @param imageResId
 	 *            The image resource id.
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setImageResource(int viewId, int imageResId) {
+	public BaseAdapterHelper setImageResource(int viewId, int imageResId) {
 		ImageView view = retrieveView(viewId);
 		view.setImageResource(imageResId);
 		return this;
@@ -175,9 +175,9 @@ public class BaseAdapterHeFranker {
 	 *            The view id.
 	 * @param color
 	 *            A color, not a resource id.
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setBackgroundColor(int viewId, int color) {
+	public BaseAdapterHelper setBackgroundColor(int viewId, int color) {
 		View view = retrieveView(viewId);
 		view.setBackgroundColor(color);
 		return this;
@@ -190,9 +190,9 @@ public class BaseAdapterHeFranker {
 	 *            The view id.
 	 * @param backgroundRes
 	 *            A resource to use as a background.
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setBackgroundRes(int viewId, int backgroundRes) {
+	public BaseAdapterHelper setBackgroundRes(int viewId, int backgroundRes) {
 		View view = retrieveView(viewId);
 		view.setBackgroundResource(backgroundRes);
 		return this;
@@ -205,9 +205,9 @@ public class BaseAdapterHeFranker {
 	 *            The view id.
 	 * @param textColor
 	 *            The text color (not a resource id).
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setTextColor(int viewId, int textColor) {
+	public BaseAdapterHelper setTextColor(int viewId, int textColor) {
 		TextView view = retrieveView(viewId);
 		view.setTextColor(textColor);
 		return this;
@@ -220,9 +220,9 @@ public class BaseAdapterHeFranker {
 	 *            The view id.
 	 * @param textColorRes
 	 *            The text color resource id.
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setTextColorRes(int viewId, int textColorRes) {
+	public BaseAdapterHelper setTextColorRes(int viewId, int textColorRes) {
 		TextView view = retrieveView(viewId);
 		view.setTextColor(context.getResources().getColor(textColorRes));
 		return this;
@@ -235,9 +235,9 @@ public class BaseAdapterHeFranker {
 	 *            The view id.
 	 * @param drawable
 	 *            The image drawable.
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setImageDrawable(int viewId, Drawable drawable) {
+	public BaseAdapterHelper setImageDrawable(int viewId, Drawable drawable) {
 		ImageView view = retrieveView(viewId);
 		view.setImageDrawable(drawable);
 		return this;
@@ -249,15 +249,15 @@ public class BaseAdapterHeFranker {
 	 * put the result into the ImageView.<br/>
 	 * Picasso manages recycling of views in a ListView.<br/>
 	 * If you need more control over the Picasso settings, use
-	 * {BaseAdapterHeFranker#setImageBuilder}.
+	 * {BaseAdapterHelper#setImageBuilder}.
 	 * 
 	 * @param viewId
 	 *            The view id.
 	 * @param imageUrl
 	 *            The image URL.
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-//	public BaseAdapterHeFranker setImageUrl(int viewId, String imageUrl) {
+//	public BaseAdapterHelper setImageUrl(int viewId, String imageUrl) {
 //		ImageView view = retrieveView(viewId);
 //		Picasso.with(context).load(imageUrl).into(view);
 //		return this;
@@ -271,9 +271,9 @@ public class BaseAdapterHeFranker {
 	 * @param requestBuilder
 	 *            The Picasso request builder. (e.g.
 	 *            Picasso.with(context).load(imageUrl))
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-//	public BaseAdapterHeFranker setImageBuilder(int viewId,
+//	public BaseAdapterHelper setImageBuilder(int viewId,
 //			RequestCreator requestBuilder) {
 //		ImageView view = retrieveView(viewId);
 //		requestBuilder.into(view);
@@ -284,7 +284,7 @@ public class BaseAdapterHeFranker {
 	 * Add an action to set the image of an image view. Can be called multiple
 	 * times.
 	 */
-	public BaseAdapterHeFranker setImageBitmap(int viewId, Bitmap bitmap) {
+	public BaseAdapterHelper setImageBitmap(int viewId, Bitmap bitmap) {
 		ImageView view = retrieveView(viewId);
 		view.setImageBitmap(bitmap);
 		return this;
@@ -295,15 +295,15 @@ public class BaseAdapterHeFranker {
 	 * AFrankha between 0-1.
 	 */
 	@SuppressLint("NewApi")
-	public BaseAdapterHeFranker setAFrankha(int viewId, float value) {
+	public BaseAdapterHelper setAlpha(int viewId, float value) {
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-			retrieveView(viewId).setAFrankha(value);
+			retrieveView(viewId).setAlpha(value);
 		} else {
 			// Pre-honeycomb hack to set AFrankha value
-			AFrankhaAnimation aFrankha = new AFrankhaAnimation(value, value);
-			aFrankha.setDuration(0);
-			aFrankha.setFillAfter(true);
-			retrieveView(viewId).startAnimation(aFrankha);
+			AlphaAnimation alpha = new AlphaAnimation(value, value);
+			alpha.setDuration(0);
+			alpha.setFillAfter(true);
+			retrieveView(viewId).startAnimation(alpha);
 		}
 		return this;
 	}
@@ -315,9 +315,9 @@ public class BaseAdapterHeFranker {
 	 *            The view id.
 	 * @param visible
 	 *            True for VISIBLE, false for GONE.
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setVisible(int viewId, boolean visible) {
+	public BaseAdapterHelper setVisible(int viewId, boolean visible) {
 		View view = retrieveView(viewId);
 		view.setVisibility(visible ? View.VISIBLE : View.GONE);
 		return this;
@@ -328,16 +328,16 @@ public class BaseAdapterHeFranker {
 	 * 
 	 * @param viewId
 	 *            The id of the TextView to linkify.
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker linkify(int viewId) {
+	public BaseAdapterHelper linkify(int viewId) {
 		TextView view = retrieveView(viewId);
 		Linkify.addLinks(view, Linkify.ALL);
 		return this;
 	}
 
 	/** Apply the typeface to the given viewId, and enable subpixel rendering. */
-	public BaseAdapterHeFranker setTypeface(int viewId, Typeface typeface) {
+	public BaseAdapterHelper setTypeface(int viewId, Typeface typeface) {
 		TextView view = retrieveView(viewId);
 		view.setTypeface(typeface);
 		view.setPaintFlags(view.getPaintFlags() | Paint.SUBPIXEL_TEXT_FLAG);
@@ -348,7 +348,7 @@ public class BaseAdapterHeFranker {
 	 * Apply the typeface to all the given viewIds, and enable subpixel
 	 * rendering.
 	 */
-	public BaseAdapterHeFranker setTypeface(Typeface typeface, int... viewIds) {
+	public BaseAdapterHelper setTypeface(Typeface typeface, int... viewIds) {
 		for (int viewId : viewIds) {
 			TextView view = retrieveView(viewId);
 			view.setTypeface(typeface);
@@ -364,9 +364,9 @@ public class BaseAdapterHeFranker {
 	 *            The view id.
 	 * @param progress
 	 *            The progress.
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setProgress(int viewId, int progress) {
+	public BaseAdapterHelper setProgress(int viewId, int progress) {
 		ProgressBar view = retrieveView(viewId);
 		view.setProgress(progress);
 		return this;
@@ -381,9 +381,9 @@ public class BaseAdapterHeFranker {
 	 *            The progress.
 	 * @param max
 	 *            The max value of a ProgressBar.
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setProgress(int viewId, int progress, int max) {
+	public BaseAdapterHelper setProgress(int viewId, int progress, int max) {
 		ProgressBar view = retrieveView(viewId);
 		view.setMax(max);
 		view.setProgress(progress);
@@ -397,9 +397,9 @@ public class BaseAdapterHeFranker {
 	 *            The view id.
 	 * @param max
 	 *            The max value of a ProgressBar.
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setMax(int viewId, int max) {
+	public BaseAdapterHelper setMax(int viewId, int max) {
 		ProgressBar view = retrieveView(viewId);
 		view.setMax(max);
 		return this;
@@ -412,9 +412,9 @@ public class BaseAdapterHeFranker {
 	 *            The view id.
 	 * @param rating
 	 *            The rating.
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setRating(int viewId, float rating) {
+	public BaseAdapterHelper setRating(int viewId, float rating) {
 		RatingBar view = retrieveView(viewId);
 		view.setRating(rating);
 		return this;
@@ -429,9 +429,9 @@ public class BaseAdapterHeFranker {
 	 *            The rating.
 	 * @param max
 	 *            The range of the RatingBar to 0...max.
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setRating(int viewId, float rating, int max) {
+	public BaseAdapterHelper setRating(int viewId, float rating, int max) {
 		RatingBar view = retrieveView(viewId);
 		view.setMax(max);
 		view.setRating(rating);
@@ -445,9 +445,9 @@ public class BaseAdapterHeFranker {
 	 *            The view id.
 	 * @param tag
 	 *            The tag;
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setTag(int viewId, Object tag) {
+	public BaseAdapterHelper setTag(int viewId, Object tag) {
 		View view = retrieveView(viewId);
 		view.setTag(tag);
 		return this;
@@ -462,10 +462,10 @@ public class BaseAdapterHeFranker {
 	 *            The key of tag;
 	 * @param tag
 	 *            The tag;
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
 	@SuppressLint("NewApi")
-	public BaseAdapterHeFranker setTag(int viewId, int key, Object tag) {
+	public BaseAdapterHelper setTag(int viewId, int key, Object tag) {
 		View view = retrieveView(viewId);
 		view.setTag(key, tag);
 		return this;
@@ -478,9 +478,9 @@ public class BaseAdapterHeFranker {
 	 *            The view id.
 	 * @param checked
 	 *            The checked status;
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setChecked(int viewId, boolean checked) {
+	public BaseAdapterHelper setChecked(int viewId, boolean checked) {
 		Checkable view = (Checkable) retrieveView(viewId);
 		view.setChecked(checked);
 		return this;
@@ -493,9 +493,9 @@ public class BaseAdapterHeFranker {
 	 *            The view id.
 	 * @param adapter
 	 *            The adapter;
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setAdapter(int viewId, Adapter adapter) {
+	public BaseAdapterHelper setAdapter(int viewId, Adapter adapter) {
 		AdapterView view = retrieveView(viewId);
 		view.setAdapter(adapter);
 		return this;
@@ -508,9 +508,9 @@ public class BaseAdapterHeFranker {
 	 *            The view id.
 	 * @param listener
 	 *            The on click listener;
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setOnClickListener(int viewId,
+	public BaseAdapterHelper setOnClickListener(int viewId,
 			View.OnClickListener listener) {
 		View view = retrieveView(viewId);
 		view.setOnClickListener(listener);
@@ -524,9 +524,9 @@ public class BaseAdapterHeFranker {
 	 *            The view id.
 	 * @param listener
 	 *            The on touch listener;
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setOnTouchListener(int viewId,
+	public BaseAdapterHelper setOnTouchListener(int viewId,
 			View.OnTouchListener listener) {
 		View view = retrieveView(viewId);
 		view.setOnTouchListener(listener);
@@ -540,9 +540,9 @@ public class BaseAdapterHeFranker {
 	 *            The view id.
 	 * @param listener
 	 *            The on long click listener;
-	 * @return The BaseAdapterHeFranker for chaining.
+	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHeFranker setOnLongClickListener(int viewId,
+	public BaseAdapterHelper setOnLongClickListener(int viewId,
 			View.OnLongClickListener listener) {
 		View view = retrieveView(viewId);
 		view.setOnLongClickListener(listener);
@@ -564,7 +564,7 @@ public class BaseAdapterHeFranker {
 	public int getPosition() {
 		if (position == -1)
 			throw new IllegalStateException(
-					"Use BaseAdapterHeFranker constructor "
+					"Use BaseAdapterHelper constructor "
 							+ "with position if you need to retrieve the position.");
 		return position;
 	}

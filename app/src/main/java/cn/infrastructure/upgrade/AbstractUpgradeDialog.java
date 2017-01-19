@@ -57,11 +57,11 @@ import cn.infrastructure.downloader.interfaces.IDListener;
         tvUpgradeContent.setTextSize(TypedValue.COMPLEX_UNIT_SP, 17.45f);
         tvUpgradeContent.setTextColor(Color.parseColor("#333333"));
         tvUpgradeContent.setGravity(Gravity.CENTER_HORIZONTAL);
-        LinearLayout.LayoutParams FrankTvUpgradeContent = new LinearLayout.LayoutParams(
+        LinearLayout.LayoutParams lpTvUpgradeContent = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        FrankTvUpgradeContent.topMargin = dp2px(45.8f);
-        FrankTvUpgradeContent.bottomMargin = dp2px(26.2f);
-        layoutContent.addView(tvUpgradeContent, FrankTvUpgradeContent);
+        lpTvUpgradeContent.topMargin = dp2px(45.8f);
+        lpTvUpgradeContent.bottomMargin = dp2px(26.2f);
+        layoutContent.addView(tvUpgradeContent, lpTvUpgradeContent);
 
         //progress bar
         ProgressBar pb = new ProgressBar(context, null, android.R.attr.progressBarStyleHorizontal);
@@ -84,13 +84,13 @@ import cn.infrastructure.downloader.interfaces.IDListener;
         layerDrawable.setId(1, android.R.id.progress);
 
         pb.setProgressDrawable(layerDrawable);
-        LinearLayout.LayoutParams FrankPb = new LinearLayout.LayoutParams(
+        LinearLayout.LayoutParams lpPb = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, dp2px(4.36f));
         int horizonMargin = dp2px(30);
-        FrankPb.leftMargin = horizonMargin;
-        FrankPb.rightMargin = horizonMargin;
-        FrankPb.bottomMargin = dp2px(20);
-        layoutContent.addView(pb, FrankPb);
+        lpPb.leftMargin = horizonMargin;
+        lpPb.rightMargin = horizonMargin;
+        lpPb.bottomMargin = dp2px(20);
+        layoutContent.addView(pb, lpPb);
 
         pb.setMax(100);
         pb.setProgress(0);

@@ -15,5 +15,5 @@ public interface IPullToLoadMoreCallback {
     void onStartLoadingMore();
     void onEndLoadingMore();
 
-    void onCanceFrankulling();
+    void onCancelPulling();
 }

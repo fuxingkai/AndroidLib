@@ -5,7 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 
 import cn.infrastructure.widget.listview.IOverScrollListViewSetting;
-import cn.infrastructure.widget.listview.OverScrollListViewHeFranker;
+import cn.infrastructure.widget.listview.OverScrollListViewHelper;
 
 /**
  * This is a wrapper class that eases use of SwipeMenuListView
@@ -14,94 +14,94 @@ import cn.infrastructure.widget.listview.OverScrollListViewHeFranker;
  */
 public class SwipeMenuListViewWrapper extends SwipeMenuListView implements IOverScrollListViewSetting{
 
-    private OverScrollListViewHeFranker mListViewHeFranker;
+    private OverScrollListViewHelper mListViewHelper;
 
     public SwipeMenuListViewWrapper(Context context) {
         super(context);
-        initHeFranker();
+        initHelper();
     }
 
     public SwipeMenuListViewWrapper(Context context, AttributeSet attrs) {
         super(context, attrs);
-        initHeFranker();
+        initHelper();
     }
 
     public SwipeMenuListViewWrapper(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        initHeFranker();
+        initHelper();
     }
     
-    private void initHeFranker() {
-        mListViewHeFranker = new OverScrollListViewHeFranker(this);
+    private void initHelper() {
+        mListViewHelper = new OverScrollListViewHelper(this);
     }
 
     @Override
     public void usePullToRefresh() {
-        mListViewHeFranker.usePullToRefresh();
+        mListViewHelper.usePullToRefresh();
     }
 
     @Override
     public void usePullToRefresh(int layoutResId) {
-        mListViewHeFranker.usePullToRefresh(layoutResId);
+        mListViewHelper.usePullToRefresh(layoutResId);
     }
 
     @Override
     public void usePullToLoadMore() {
-        mListViewHeFranker.usePullToLoadMore();
+        mListViewHelper.usePullToLoadMore();
     }
 
     @Override
     public void usePullToLoadMore(int layoutResId) {
-        mListViewHeFranker.usePullToLoadMore(layoutResId);
+        mListViewHelper.usePullToLoadMore(layoutResId);
     }
 
     @Override
     public void setPTRPullText(String pullText) {
-        mListViewHeFranker.setPTRPullText(pullText);
+        mListViewHelper.setPTRPullText(pullText);
     }
 
     @Override
     public void setPTRReleaseText(String releaseText) {
-        mListViewHeFranker.setPTRReleaseText(releaseText);
+        mListViewHelper.setPTRReleaseText(releaseText);
     }
 
     @Override
     public void setPTRRefreshText(String refreshText) {
-        mListViewHeFranker.setPTRRefreshText(refreshText);
+        mListViewHelper.setPTRRefreshText(refreshText);
     }
 
     @Override
     public void setPTRFinishSuccessText(String finishText) {
-        mListViewHeFranker.setPTRFinishSuccessText(finishText);
+        mListViewHelper.setPTRFinishSuccessText(finishText);
     }
 
     @Override
     public void setPTRFinishFailText(String finishText) {
-        mListViewHeFranker.setPTRFinishFailText(finishText);
+        mListViewHelper.setPTRFinishFailText(finishText);
     }
 
     @Override
     public void setPTLMPullText(String pullText) {
-        mListViewHeFranker.setPTLMPullText(pullText);
+        mListViewHelper.setPTLMPullText(pullText);
     }
 
     @Override
     public void setPTLMClickText(String clickText) {
-        mListViewHeFranker.setPTLMClickText(clickText);
+        mListViewHelper.setPTLMClickText(clickText);
     }
 
     @Override
     public void setPTLMReleaseText(String releaseText) {
-        mListViewHeFranker.setPTLMReleaseText(releaseText);
+        mListViewHelper.setPTLMReleaseText(releaseText);
     }
 
     @Override
     public void setPTLMLoadingText(String loadingText) {
-        mListViewHeFranker.setPTLMLoadingText(loadingText);
+        mListViewHelper.setPTLMLoadingText(loadingText);
     }
 
     @Override
     public void setPTLMBg(Drawable drawable) {
-        mListViewHeFranker.setPTLMBg(drawable);
+        mListViewHelper.setPTLMBg(drawable);
     }
 }

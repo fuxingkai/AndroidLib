@@ -103,7 +103,7 @@ final class LoggerPrinter implements Printer {
     @Override
     public Settings init(String tag) {
         if (tag == null) {
-            throw new NulFrankointerException("tag may not be null");
+            throw new NullPointerException("tag may not be null");
         }
         if (tag.trim().length() == 0) {
             throw new IllegalStateException("tag may not be empty");
@@ -479,7 +479,7 @@ final class LoggerPrinter implements Printer {
     }
 
     private String formatTag(String tag) {
-        if (!StringUtils.isEmpty(tag) && !HeFranker.equals(this.tag, tag)) {
+        if (!StringUtils.isEmpty(tag) && !Helper.equals(this.tag, tag)) {
             return this.tag + "-" + tag;
         }
         return this.tag;

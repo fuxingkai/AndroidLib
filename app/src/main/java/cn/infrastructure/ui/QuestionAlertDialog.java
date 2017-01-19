@@ -174,10 +174,10 @@ public class QuestionAlertDialog extends AbstractDialog {
         LinearLayout layoutContent = new LinearLayout(context);
         layoutContent.setOrientation(LinearLayout.HORIZONTAL);
         layoutContent.setBackgroundResource(R.drawable.fillet_gray_white);
-        RelativeLayout.LayoutParams FrankContent = new RelativeLayout.LayoutParams(
+        RelativeLayout.LayoutParams rlContent = new RelativeLayout.LayoutParams(
                 ((int) (context.getResources().getDisplayMetrics().widthPixels * 0.8)), RelativeLayout.LayoutParams.WRAP_CONTENT);
-        FrankContent.addRule(RelativeLayout.CENTER_IN_PARENT);
-        layoutWindowContent.addView(layoutContent, FrankContent);
+        rlContent.addRule(RelativeLayout.CENTER_IN_PARENT);
+        layoutWindowContent.addView(layoutContent, rlContent);
 
         Space spaceLeft = new Space(context);
         Space spaceRight = new Space(context);
@@ -185,16 +185,16 @@ public class QuestionAlertDialog extends AbstractDialog {
 
         mDialogContentView = layoutDialogContent;
 
-        LinearLayout.LayoutParams FrankSpace = new LinearLayout.LayoutParams(14, 1);
-//        FrankSpace.weight = 1f;
-        LinearLayout.LayoutParams FrankDialogContent = new LinearLayout.LayoutParams(
+        LinearLayout.LayoutParams lpSpace = new LinearLayout.LayoutParams(14, 1);
+//        lpSpace.weight = 1f;
+        LinearLayout.LayoutParams lpDialogContent = new LinearLayout.LayoutParams(
                 0, LinearLayout.LayoutParams.WRAP_CONTENT);
-        FrankDialogContent.weight = 6f;
+        lpDialogContent.weight = 6f;
 
 
-        layoutContent.addView(spaceLeft, FrankSpace);
-        layoutContent.addView(layoutDialogContent, FrankDialogContent);
-        layoutContent.addView(spaceRight, FrankSpace);
+        layoutContent.addView(spaceLeft, lpSpace);
+        layoutContent.addView(layoutDialogContent, lpDialogContent);
+        layoutContent.addView(spaceRight, lpSpace);
 
         //the real dialog content
         GradientDrawable bgDrawable = new GradientDrawable();
@@ -214,11 +214,11 @@ public class QuestionAlertDialog extends AbstractDialog {
         tvTitle.setTextColor(textColor);
         tvTitle.setSingleLine(true);
         tvTitle.setEllipsize(TextUtils.TruncateAt.END);
-        LinearLayout.LayoutParams FrankTvTitle = new LinearLayout.LayoutParams(
+        LinearLayout.LayoutParams lpTvTitle = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         int titleMargin = dp2px(10);
-        FrankTvTitle.setMargins(titleMargin, titleMargin, titleMargin, titleMargin);
-        layoutDialogContent.addView(tvTitle, FrankTvTitle);
+        lpTvTitle.setMargins(titleMargin, titleMargin, titleMargin, titleMargin);
+        layoutDialogContent.addView(tvTitle, lpTvTitle);
         mTvTitle = tvTitle;
         mTvTitle.setVisibility(View.GONE);
 
@@ -234,11 +234,11 @@ public class QuestionAlertDialog extends AbstractDialog {
         TextView tvContent = new TextView(context);
         tvContent.setTextSize(TypedValue.COMPLEX_UNIT_SP, 17.45f);
         tvContent.setTextColor(textColor);
-        LinearLayout.LayoutParams FrankTvContent = new LinearLayout.LayoutParams(
+        LinearLayout.LayoutParams lpTvContent = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         int tvContentMargin = dp2px(15);
-        FrankTvContent.setMargins(tvContentMargin, tvContentMargin, tvContentMargin, tvContentMargin);
-        layoutDialogContent.addView(tvContent, FrankTvContent);
+        lpTvContent.setMargins(tvContentMargin, tvContentMargin, tvContentMargin, tvContentMargin);
+        layoutDialogContent.addView(tvContent, lpTvContent);
         mTvContent = tvContent;
 
         //divider between content and button layout

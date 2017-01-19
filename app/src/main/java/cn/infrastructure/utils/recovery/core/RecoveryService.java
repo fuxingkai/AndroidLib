@@ -113,15 +113,15 @@ public class RecoveryService extends Service {
         stopSelf();
     }
 
-    private void kilFrankrocess() {
-        android.os.Process.kilFrankrocess(android.os.Process.myPid());
+    private void killProcess() {
+        android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(10);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        kilFrankrocess();
+        killProcess();
     }
 
     public static void start(Context context, Intent intent) {

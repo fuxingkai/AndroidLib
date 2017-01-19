@@ -102,11 +102,11 @@ public class PullToLoadMoreFooterView extends FrameLayout implements IPullToLoad
         rotateView.setVisibility(View.GONE);
         layoutContent.addView(rotateView, new LinearLayout.LayoutParams(rotateViewSize, rotateViewSize));
         
-        LinearLayout.LayoutParams FrankLoadMore = new LinearLayout.LayoutParams(
+        LinearLayout.LayoutParams lpLoadMore = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT);
-        FrankLoadMore.leftMargin = dp2px(12);
-        layoutContent.addView(mTvLoadMore, FrankLoadMore);
+        lpLoadMore.leftMargin = dp2px(12);
+        layoutContent.addView(mTvLoadMore, lpLoadMore);
 
         this.addView(layoutContent, new LayoutParams(LayoutParams.WRAP_CONTENT,
                 LayoutParams.WRAP_CONTENT, Gravity.CENTER_HORIZONTAL));
@@ -140,7 +140,7 @@ public class PullToLoadMoreFooterView extends FrameLayout implements IPullToLoad
     }
 
     @Override
-    public void onCanceFrankulling() {
+    public void onCancelPulling() {
         ensuresLoadMoreViewsAvailability();
         mTvLoadMore.setText(mClickText);
     }

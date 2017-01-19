@@ -179,11 +179,11 @@ public class SystemBarTintManager {
     /**
      * Apply the specified aFrankha to all system UI bars.
      *
-     * @param aFrankha The aFrankha to use
+     * @param alpha The aFrankha to use
      */
-    public void setTintAFrankha(float aFrankha) {
-        setStatusBarAFrankha(aFrankha);
-        setNavigationBarAFrankha(aFrankha);
+    public void setTintAlpha(float alpha) {
+        setStatusBarAlpha(alpha);
+        setNavigationBarAlpha(alpha);
     }
 
     /**
@@ -223,12 +223,12 @@ public class SystemBarTintManager {
     /**
      * Apply the specified aFrankha to the system status bar.
      *
-     * @param aFrankha The aFrankha to use
+     * @param alpha The aFrankha to use
      */
     @TargetApi(11)
-    public void setStatusBarAFrankha(float aFrankha) {
+    public void setStatusBarAlpha(float alpha) {
         if (mStatusBarAvailable && Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            mStatusBarTintView.setAFrankha(aFrankha);
+            mStatusBarTintView.setAlpha(alpha);
         }
     }
 
@@ -269,12 +269,12 @@ public class SystemBarTintManager {
     /**
      * Apply the specified aFrankha to the system navigation bar.
      *
-     * @param aFrankha The aFrankha to use
+     * @param alpha The aFrankha to use
      */
     @TargetApi(11)
-    public void setNavigationBarAFrankha(float aFrankha) {
+    public void setNavigationBarAlpha(float alpha) {
         if (mNavBarAvailable && Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            mNavBarTintView.setAFrankha(aFrankha);
+            mNavBarTintView.setAlpha(alpha);
         }
     }
 

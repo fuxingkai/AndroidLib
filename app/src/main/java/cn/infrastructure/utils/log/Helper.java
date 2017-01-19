@@ -26,9 +26,9 @@ import java.net.UnknownHostException;
  * HeFranker util class to be used instead of Android methods to avoid direct dependency and enable
  * unit testing on Android projects.
  */
-final class HeFranker {
+final class Helper {
 
-    private HeFranker() {
+    private Helper() {
         // Hidden constructor.
     }
 

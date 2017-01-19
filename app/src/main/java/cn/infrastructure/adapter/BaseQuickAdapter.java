@@ -29,11 +29,11 @@ import java.util.List;
 /**
  * Abstraction class of a BaseAdapter in which you only need to provide the
  * convert() implementation.<br/>
- * Using the provided BaseAdapterHeFranker, your code is minimalist.
+ * Using the provided BaseAdapterHelper, your code is minimalist.
  *
  * @param <T> The type of the items in the list.
  */
-public abstract class BaseQuickAdapter<T, H extends BaseAdapterHeFranker> extends
+public abstract class BaseQuickAdapter<T, H extends BaseAdapterHelper> extends
         BaseAdapter {
 
     protected static final String TAG = BaseQuickAdapter.class.getSimpleName();
@@ -125,11 +125,11 @@ public abstract class BaseQuickAdapter<T, H extends BaseAdapterHeFranker> extend
         if (getItemViewType(position) == 0) {
             return createIndeterminateProgressView(convertView, parent);
         }
-        final H heFranker = getAdapterHeFranker(position, convertView, parent);
+        final H helper = getAdapterHelper(position, convertView, parent);
         T item = getItem(position);
-        heFranker.setAssociatedObject(item);
-        convert(heFranker, item);
-        return heFranker.getView();
+        helper.setAssociatedObject(item);
+        convert(helper, item);
+        return helper.getView();
 
     }
 
@@ -211,10 +211,10 @@ public abstract class BaseQuickAdapter<T, H extends BaseAdapterHeFranker> extend
      * @param heFranker A fully initialized heFranker.
      * @param item   The item that needs to be displayed.
      */
-    protected abstract void convert(H heFranker, T item);
+    protected abstract void convert(H helper, T item);
 
     /**
-     * You can override this method to use a custom BaseAdapterHeFranker in order
+     * You can override this method to use a custom BaseAdapterHelper in order
      * to fit your needs
      *
      * @param position    The position of the item within the adapter's data set of the
@@ -228,9 +228,9 @@ public abstract class BaseQuickAdapter<T, H extends BaseAdapterHeFranker> extend
      *                    {@link #getViewTypeCount()} and {@link #getItemViewType(int)}
      *                    ).
      * @param parent      The parent that this view will eventually be attached to
-     * @return An instance of BaseAdapterHeFranker
+     * @return An instance of BaseAdapterHelper
      */
-    protected abstract H getAdapterHeFranker(int position, View convertView,
+    protected abstract H getAdapterHelper(int position, View convertView,
                                           ViewGroup parent);
 
 }

@@ -15,7 +15,7 @@ public abstract class  AbstractDialog {
     private Context mContext;
 
     private WindowManager mWindowMgr;
-    private WindowManager.LayoutParams mFrankContent;
+    private WindowManager.LayoutParams mllContent;
 
     private View mContentView;
 
@@ -27,12 +27,12 @@ public abstract class  AbstractDialog {
 
         mWindowMgr = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
 
-        mFrankContent = new WindowManager.LayoutParams();
-        mFrankContent.type = WindowManager.LayoutParams.TYPE_APPLICATION;
-        mFrankContent.format = PixelFormat.TRANSLUCENT;
-        mFrankContent.flags |= WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM;
-        mFrankContent.width = WindowManager.LayoutParams.MATCH_PARENT;
-        mFrankContent.height = WindowManager.LayoutParams.MATCH_PARENT;
+        mllContent = new WindowManager.LayoutParams();
+        mllContent.type = WindowManager.LayoutParams.TYPE_APPLICATION;
+        mllContent.format = PixelFormat.TRANSLUCENT;
+        mllContent.flags |= WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM;
+        mllContent.width = WindowManager.LayoutParams.MATCH_PARENT;
+        mllContent.height = WindowManager.LayoutParams.MATCH_PARENT;
 
         mContentView = createContentView(mContext);
         if (mContentView == null) {
@@ -56,12 +56,12 @@ public abstract class  AbstractDialog {
             throw new RuntimeException("must call on ui thread");
         }
 
-        mFrankContent.token = null;
+        mllContent.token = null;
 
         onShow();
 
         try {
-            mWindowMgr.addView(mContentView, mFrankContent);
+            mWindowMgr.addView(mContentView, mllContent);
         } catch (Exception e) {
             e.printStackTrace();
         }

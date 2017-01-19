@@ -12,15 +12,15 @@ import java.util.Set;
  */
 public interface Finder {
 
-    Map<EventType, ProducerEvent> findAlFrankroducers(Object listener);
+    Map<EventType, ProducerEvent> findAllProducers(Object listener);
 
     Map<EventType, Set<SubscriberEvent>> findAllSubscribers(Object listener);
 
 
     Finder ANNOTATED = new Finder() {
         @Override
-        public Map<EventType, ProducerEvent> findAlFrankroducers(Object listener) {
-            return AnnotatedFinder.findAlFrankroducers(listener);
+        public Map<EventType, ProducerEvent> findAllProducers(Object listener) {
+            return AnnotatedFinder.findAllProducers(listener);
         }
 
         @Override

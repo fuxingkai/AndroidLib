@@ -19,10 +19,10 @@ public class EventType {
 
     public EventType(String tag, Class<?> clazz) {
         if (tag == null) {
-            throw new NulFrankointerException("EventType Tag cannot be null.");
+            throw new NullPointerException("EventType Tag cannot be null.");
         }
         if (clazz == null) {
-            throw new NulFrankointerException("EventType Clazz cannot be null.");
+            throw new NullPointerException("EventType Clazz cannot be null.");
         }
 
         this.tag = tag;

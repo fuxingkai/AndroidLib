@@ -329,8 +329,8 @@ public final class RecoveryActivity extends AppCompatActivity {
         return true;
     }
 
-    private void kilFrankrocess() {
-        android.os.Process.kilFrankrocess(android.os.Process.myPid());
+    private void killProcess() {
+        android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(10);
     }
 
@@ -378,7 +378,7 @@ public final class RecoveryActivity extends AppCompatActivity {
     @Override
     public void finish() {
         super.finish();
-        kilFrankrocess();
+        killProcess();
     }
 
 }

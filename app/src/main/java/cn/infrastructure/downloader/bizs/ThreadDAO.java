@@ -14,15 +14,15 @@ import static cn.infrastructure.downloader.bizs.DLCons.DBCons.TB_THREAD_START;
 import static cn.infrastructure.downloader.bizs.DLCons.DBCons.TB_THREAD_URL_BASE;
 
 class ThreadDAO implements IThreadDAO {
-    private final DLDBHeFranker dbHeFranker;
+    private final DLDBHelper dbHelper;
 
     ThreadDAO(Context context) {
-        dbHeFranker = new DLDBHeFranker(context);
+        dbHelper = new DLDBHelper(context);
     }
 
     @Override
     public void insertThreadInfo(DLThreadInfo info) {
-        SQLiteDatabase db = dbHeFranker.getWritableDatabase();
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
         db.execSQL("INSERT INTO " + TB_THREAD + "(" +
                         TB_THREAD_URL_BASE + ", " +
                         TB_THREAD_START + ", " +
@@ -34,14 +34,14 @@ class ThreadDAO implements IThreadDAO {
 
     @Override
     public void deleteThreadInfo(String id) {
-        SQLiteDatabase db = dbHeFranker.getWritableDatabase();
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
         db.execSQL("DELETE FROM " + TB_THREAD + " WHERE " + TB_THREAD_ID + "=?", new String[]{id});
         db.close();
     }
 
     @Override
     public void deleteAllThreadInfo(String url) {
-        SQLiteDatabase db = dbHeFranker.getWritableDatabase();
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
         db.execSQL("DELETE FROM " + TB_THREAD + " WHERE " + TB_THREAD_URL_BASE + "=?",
                 new String[]{url});
         db.close();
@@ -49,7 +49,7 @@ class ThreadDAO implements IThreadDAO {
 
     @Override
     public void updateThreadInfo(DLThreadInfo info) {
-        SQLiteDatabase db = dbHeFranker.getWritableDatabase();
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
         db.execSQL("UPDATE " + TB_THREAD + " SET " +
                 TB_THREAD_START + "=? WHERE " +
                 TB_THREAD_URL_BASE + "=? AND " +
@@ -60,7 +60,7 @@ class ThreadDAO implements IThreadDAO {
     @Override
     public DLThreadInfo queryThreadInfo(String id) {
         DLThreadInfo info = null;
-        SQLiteDatabase db = dbHeFranker.getWritableDatabase();
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
         Cursor c = db.rawQuery("SELECT " +
                 TB_THREAD_URL_BASE + ", " +
                 TB_THREAD_START + ", " +
@@ -76,7 +76,7 @@ class ThreadDAO implements IThreadDAO {
     @Override
     public List<DLThreadInfo> queryAllThreadInfo(String url) {
         List<DLThreadInfo> info = new ArrayList<DLThreadInfo>();
-        SQLiteDatabase db = dbHeFranker.getWritableDatabase();
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
         Cursor c = db.rawQuery("SELECT " +
                 TB_THREAD_URL_BASE + ", " +
                 TB_THREAD_START + ", " +

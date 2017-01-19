@@ -1,14 +1,6 @@
 [
     {
-        "merged": "D:\\Frank\\gitWorkspace\\Base\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-w768dp-h1021dp-v13\\dlg_loading.xml",
-        "source": "D:\\Frank\\gitWorkspace\\Base\\app\\build\\intermediates\\bundles\\debug\\res\\layout-w768dp-h1021dp-v13\\dlg_loading.xml"
-    },
-    {
         "merged": "D:\\Frank\\gitWorkspace\\AndroidLib\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-w768dp-h1021dp-v13\\dlg_loading.xml",
         "source": "D:\\Frank\\gitWorkspace\\AndroidLib\\app\\build\\intermediates\\bundles\\debug\\res\\layout-w768dp-h1021dp-v13\\dlg_loading.xml"
-    },
-    {
-        "merged": "D:\\asWorkSpace\\Base\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-w768dp-h1021dp-v13\\dlg_loading.xml",
-        "source": "D:\\asWorkSpace\\Base\\app\\build\\intermediates\\bundles\\debug\\res\\layout-w768dp-h1021dp-v13\\dlg_loading.xml"
     }
 ]

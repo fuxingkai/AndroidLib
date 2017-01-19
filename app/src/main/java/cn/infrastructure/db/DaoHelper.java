@@ -6,30 +6,30 @@ import org.greenrobot.greendao.async.AsyncSession;
 
 import cn.infrastructure.db.dao.CrashLogDao;
 
-public class DaoHeFranker {
+public class DaoHelper {
 
-	private static DaoHeFranker instance = null;
+	private static DaoHelper instance = null;
 
 	private static final String DB_NAME = "CrashLog.db";
 	private DaoSession daoSession;
 	private AsyncSession asyncSession;
 
-	public static DaoHeFranker getInstance(Context context) {
+	public static DaoHelper getInstance(Context context) {
 		if (null == instance) {
-			synchronized (DaoHeFranker.class) {
+			synchronized (DaoHelper.class) {
 				if (null == instance) {
-					instance = new DaoHeFranker(context);
+					instance = new DaoHelper(context);
 				}
 			}
 		}
 		return instance;
 	}
 
-	private DaoHeFranker(Context context) {
-		DaoMaster.DevOpenHeFranker heFranker = new DaoMaster.DevOpenHeFranker(context,
+	private DaoHelper(Context context) {
+		DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(context,
 				DB_NAME, null);
 
-		DaoMaster daoMaster = new DaoMaster(heFranker.getWritableDatabase());
+		DaoMaster daoMaster = new DaoMaster(helper.getWritableDatabase());
 
 		daoSession = daoMaster.newSession();
 		asyncSession = daoSession.startAsyncSession();

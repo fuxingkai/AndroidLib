@@ -9,11 +9,11 @@ final class Preconditions {
      *
      * @param reference an object reference
      * @return the non-null reference that was validated
-     * @throws NulFrankointerException if {@code reference} is null
+     * @throws NullPointerException if {@code reference} is null
      */
     static <T> T checkNotNull(T reference) {
         if (reference == null) {
-            throw new NulFrankointerException();
+            throw new NullPointerException();
         }
         return reference;
     }
@@ -25,11 +25,11 @@ final class Preconditions {
      * @param errorMessage the exception message to use if the check fails; will be converted to a
      *                     string using {@link String#valueOf(Object)}
      * @return the non-null reference that was validated
-     * @throws NulFrankointerException if {@code reference} is null
+     * @throws NullPointerException if {@code reference} is null
      */
     static <T> T checkNotNull(T reference, @Nullable Object errorMessage) {
         if (reference == null) {
-            throw new NulFrankointerException(String.valueOf(errorMessage));
+            throw new NullPointerException(String.valueOf(errorMessage));
         }
         return reference;
     }

@@ -15,97 +15,97 @@ import cn.infrastructure.widget.listview.IOverScrollListViewSetting;
 public class GroupableOverScrollListViewWrapper extends
         GroupableOverScrollListView implements IOverScrollListViewSetting {
 
-    private GroupableOverScrollListViewHeFranker mListViewHeFranker;
+    private GroupableOverScrollListViewHelper mListViewHelper;
 
     public GroupableOverScrollListViewWrapper(Context context) {
         super(context);
-        initHeFranker();
+        initHelper();
     }
 
     public GroupableOverScrollListViewWrapper(Context context,
             AttributeSet attrs) {
         super(context, attrs);
-        initHeFranker();
+        initHelper();
     }
 
     public GroupableOverScrollListViewWrapper(Context context,
             AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        initHeFranker();
+        initHelper();
     }
 
-    private void initHeFranker() {
-        mListViewHeFranker = new GroupableOverScrollListViewHeFranker(this);
+    private void initHelper() {
+        mListViewHelper = new GroupableOverScrollListViewHelper(this);
     }
 
     @Override
     public void usePullToRefresh() {
-        mListViewHeFranker.usePullToRefresh();
+        mListViewHelper.usePullToRefresh();
     }
 
     @Override
     public void usePullToRefresh(int layoutResId) {
-        mListViewHeFranker.usePullToRefresh(layoutResId);
+        mListViewHelper.usePullToRefresh(layoutResId);
     }
 
     @Override
     public void usePullToLoadMore() {
-        mListViewHeFranker.usePullToLoadMore();
+        mListViewHelper.usePullToLoadMore();
     }
 
     @Override
     public void usePullToLoadMore(int layoutResId) {
-        mListViewHeFranker.usePullToLoadMore(layoutResId);
+        mListViewHelper.usePullToLoadMore(layoutResId);
     }
 
     @Override
     public void setPTRPullText(String pullText) {
-        mListViewHeFranker.setPTRPullText(pullText);
+        mListViewHelper.setPTRPullText(pullText);
     }
 
     @Override
     public void setPTRReleaseText(String releaseText) {
-        mListViewHeFranker.setPTRReleaseText(releaseText);
+        mListViewHelper.setPTRReleaseText(releaseText);
     }
 
     @Override
     public void setPTRRefreshText(String refreshText) {
-        mListViewHeFranker.setPTRRefreshText(refreshText);
+        mListViewHelper.setPTRRefreshText(refreshText);
     }
 
     @Override
     public void setPTRFinishSuccessText(String finishText) {
-        mListViewHeFranker.setPTRFinishSuccessText(finishText);
+        mListViewHelper.setPTRFinishSuccessText(finishText);
     }
 
     @Override
     public void setPTRFinishFailText(String finishText) {
-        mListViewHeFranker.setPTRFinishFailText(finishText);
+        mListViewHelper.setPTRFinishFailText(finishText);
     }
 
     @Override
     public void setPTLMPullText(String pullText) {
-        mListViewHeFranker.setPTLMPullText(pullText);
+        mListViewHelper.setPTLMPullText(pullText);
     }
 
     @Override
     public void setPTLMClickText(String clickText) {
-        mListViewHeFranker.setPTLMClickText(clickText);
+        mListViewHelper.setPTLMClickText(clickText);
     }
 
     @Override
     public void setPTLMReleaseText(String releaseText) {
-        mListViewHeFranker.setPTLMReleaseText(releaseText);
+        mListViewHelper.setPTLMReleaseText(releaseText);
     }
 
     @Override
     public void setPTLMLoadingText(String loadingText) {
-        mListViewHeFranker.setPTLMLoadingText(loadingText);
+        mListViewHelper.setPTLMLoadingText(loadingText);
     }
 
     @Override
     public void setPTLMBg(Drawable drawable) {
-        mListViewHeFranker.setPTLMBg(drawable);
+        mListViewHelper.setPTLMBg(drawable);
     }
 
 }

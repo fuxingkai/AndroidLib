@@ -4,7 +4,6 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.os.Build;
 
-import cn.infrastructure.db.DaoHeFranker;
 import cn.infrastructure.db.entity.CrashLog;
 import cn.infrastructure.utils.DateUtils;
 import cn.infrastructure.utils.NetWorkUtils;

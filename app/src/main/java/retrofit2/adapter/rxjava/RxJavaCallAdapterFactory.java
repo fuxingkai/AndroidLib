@@ -72,7 +72,7 @@ public final class RxJavaCallAdapterFactory extends CallAdapter.Factory {
      * {@linkplain Observable#subscribeOn(Scheduler) subscribe on} {@code scheduler} by default.
      */
     public static RxJavaCallAdapterFactory createWithScheduler(Scheduler scheduler) {
-        if (scheduler == null) throw new NulFrankointerException("scheduler == null");
+        if (scheduler == null) throw new NullPointerException("scheduler == null");
         return new RxJavaCallAdapterFactory(scheduler);
     }
 
@@ -102,14 +102,14 @@ public final class RxJavaCallAdapterFactory extends CallAdapter.Factory {
             // regular Observable operation can be leveraged without relying on this unstable RxJava API.
             // Note that this has to be done separately since Completable doesn't have a parametrized
             // type.
-            return CompletableHeFranker.createCallAdapter(scheduler);
+            return CompletableHelper.createCallAdapter(scheduler);
         }
 
         CallAdapter<Observable<?>> callAdapter = getCallAdapter(returnType, scheduler);
         if (isSingle) {
             // Add Single-converter wrapper from a separate class. This defers classloading such that
             // regular Observable operation can be leveraged without relying on this unstable RxJava API.
-            return SingleHeFranker.makeSingle(callAdapter);
+            return SingleHelper.makeSingle(callAdapter);
         }
         return callAdapter;
     }

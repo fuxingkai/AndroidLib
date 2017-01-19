@@ -7,7 +7,7 @@ import android.util.Log;
 
 import org.greenrobot.greendao.AbstractDaoMaster;
 import org.greenrobot.greendao.database.Database;
-import org.greenrobot.greendao.database.DatabaseOpenHeFranker;
+import org.greenrobot.greendao.database.DatabaseOpenHelper;
 import org.greenrobot.greendao.database.StandardDatabase;
 import org.greenrobot.greendao.identityscope.IdentityScopeType;
 
@@ -34,10 +34,10 @@ public class DaoMaster extends AbstractDaoMaster {
 
     /**
      * WARNING: Drops all table on Upgrade! Use only during development.
-     * Convenience method using a {@link DevOpenHeFranker}.
+     * Convenience method using a {@link DevOpenHelper}.
      */
     public static DaoSession newDevSession(Context context, String name) {
-        Database db = new DevOpenHeFranker(context, name).getWritableDb();
+        Database db = new DevOpenHelper(context, name).getWritableDb();
         DaoMaster daoMaster = new DaoMaster(db);
         return daoMaster.newSession();
     }
@@ -62,12 +62,12 @@ public class DaoMaster extends AbstractDaoMaster {
     /**
      * Calls {@link #createAllTables(Database, boolean)} in {@link #onCreate(Database)} -
      */
-    public static abstract class OpenHeFranker extends DatabaseOpenHeFranker {
-        public OpenHeFranker(Context context, String name) {
+    public static abstract class OpenHelper extends DatabaseOpenHelper {
+        public OpenHelper(Context context, String name) {
             super(context, name, SCHEMA_VERSION);
         }
 
-        public OpenHeFranker(Context context, String name, CursorFactory factory) {
+        public OpenHelper(Context context, String name, CursorFactory factory) {
             super(context, name, factory, SCHEMA_VERSION);
         }
 
@@ -79,12 +79,12 @@ public class DaoMaster extends AbstractDaoMaster {
     }
 
     /** WARNING: Drops all table on Upgrade! Use only during development. */
-    public static class DevOpenHeFranker extends OpenHeFranker {
-        public DevOpenHeFranker(Context context, String name) {
+    public static class DevOpenHelper extends OpenHelper {
+        public DevOpenHelper(Context context, String name) {
             super(context, name);
         }
 
-        public DevOpenHeFranker(Context context, String name, CursorFactory factory) {
+        public DevOpenHelper(Context context, String name, CursorFactory factory) {
             super(context, name, factory);
         }
 

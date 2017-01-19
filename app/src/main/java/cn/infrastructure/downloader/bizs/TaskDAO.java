@@ -17,15 +17,15 @@ import static cn.infrastructure.downloader.bizs.DLCons.DBCons.TB_TASK_URL_BASE;
 import static cn.infrastructure.downloader.bizs.DLCons.DBCons.TB_TASK_URL_REAL;
 
 class TaskDAO implements ITaskDAO {
-    private final DLDBHeFranker dbHeFranker;
+    private final DLDBHelper dbHelper;
 
     TaskDAO(Context context) {
-        dbHeFranker = new DLDBHeFranker(context);
+        dbHelper = new DLDBHelper(context);
     }
 
     @Override
     public void insertTaskInfo(DLInfo info) {
-        SQLiteDatabase db = dbHeFranker.getWritableDatabase();
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
         db.execSQL("INSERT INTO " + TB_TASK + "(" +
                         TB_TASK_URL_BASE + ", " +
                         TB_TASK_URL_REAL + ", " +
@@ -45,7 +45,7 @@ class TaskDAO implements ITaskDAO {
 
     @Override
     public void deleteTaskInfo(String url) {
-        SQLiteDatabase db = dbHeFranker.getWritableDatabase();
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
         db.execSQL("DELETE FROM " + TB_TASK + " WHERE " + TB_TASK_URL_BASE + "=?",
                 new String[]{url});
         db.close();
@@ -53,7 +53,7 @@ class TaskDAO implements ITaskDAO {
 
     @Override
     public void updateTaskInfo(DLInfo info) {
-        SQLiteDatabase db = dbHeFranker.getWritableDatabase();
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
         db.execSQL("UPDATE " + TB_TASK + " SET " +
                 TB_TASK_DISPOSITION + "=?," +
                 TB_TASK_LOCATION + "=?," +
@@ -69,7 +69,7 @@ class TaskDAO implements ITaskDAO {
     @Override
     public DLInfo queryTaskInfo(String url) {
         DLInfo info = null;
-        SQLiteDatabase db = dbHeFranker.getWritableDatabase();
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
         Cursor c = db.rawQuery("SELECT " +
                 TB_TASK_URL_BASE + ", " +
                 TB_TASK_URL_REAL + ", " +

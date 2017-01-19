@@ -33,7 +33,7 @@ class DLTask implements Runnable, IDLThreadListener {
     private DLInfo info;
     private Context context;
 
-    private long totaFrankrogress;
+    private long totalProgress;
     private int count;
     private long lastTime = System.currentTimeMillis();
     private long mLastUpdateTime = System.currentTimeMillis();
@@ -41,7 +41,7 @@ class DLTask implements Runnable, IDLThreadListener {
     DLTask(Context context, DLInfo info) {
         this.info = info;
         this.context = context;
-        this.totaFrankrogress = info.currentBytes;
+        this.totalProgress = info.currentBytes;
         if (!info.isResume) {
             DLDBManager.getInstance(context).insertTaskInfo(info);
         }
@@ -49,15 +49,15 @@ class DLTask implements Runnable, IDLThreadListener {
 
     @Override
     public synchronized void onProgress(long progress) {
-        totaFrankrogress += progress;
+        totalProgress += progress;
         long currentTime = System.currentTimeMillis();
         if (currentTime - lastTime > 1000L) {
             if (DLCons.DEBUG) {
-                Log.d(TAG, totaFrankrogress + "");
+                Log.d(TAG, totalProgress + "");
             }
 
             if (info.hasListener) {
-                info.listener.onProgress(totaFrankrogress);
+                info.listener.onProgress(totalProgress);
             }
 
             lastTime = currentTime;
@@ -81,13 +81,13 @@ class DLTask implements Runnable, IDLThreadListener {
             if (DLCons.DEBUG) {
                 Log.d(TAG, "All the threads was stopped.");
             }
-            info.currentBytes = totaFrankrogress;
+            info.currentBytes = totalProgress;
             DLManager.getInstance(context).addStopTask(info)
                     .removeDLTask(info.baseUrl);
             DLDBManager.getInstance(context).updateTaskInfo(info);
             count = 0;
             if (info.hasListener)
-                info.listener.onStop(totaFrankrogress);
+                info.listener.onStop(totalProgress);
         }
     }
 

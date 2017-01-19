@@ -15,20 +15,20 @@ import cn.infrastructure.widget.listview.PullToRefreshHeaderView;
  * Created by Frank on 2016/7/13.
  *
  */
-/* package */ class GroupableOverScrollListViewHeFranker implements IOverScrollListViewSetting {
+/* package */ class GroupableOverScrollListViewHelper implements IOverScrollListViewSetting {
 
-    private static final String TAG = "GroupableOverScrollListViewHeFranker";
+    private static final String TAG = "GroupableOverScrollListViewHelper";
 
     private GroupableOverScrollListView mListView;
 
     private PullToRefreshHeaderView mPullToRefreshHeaderView;
     private PullToLoadMoreFooterView mPullToLoadMoreFooterView;
 
-    public GroupableOverScrollListViewHeFranker(
+    public GroupableOverScrollListViewHelper(
             GroupableOverScrollListView listview) {
         this.mListView = listview;
         if (this.mListView == null) {
-            throw new NulFrankointerException("list view is null");
+            throw new NullPointerException("list view is null");
         }
     }
 

@@ -2,7 +2,7 @@ package cn.infrastructure.widget;
 
 import android.content.Context;
 import android.view.View;
-import android.view.animation.AFrankhaAnimation;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.widget.RelativeLayout;
@@ -58,7 +58,7 @@ public class MaskView extends RelativeLayout {
 		isShowing = true;
 		clearAnimation();
 		setVisibility(View.VISIBLE);
-		AFrankhaAnimation an = new AFrankhaAnimation(0, 1);
+		AlphaAnimation an = new AlphaAnimation(0, 1);
 		an.setDuration(durationMillis);
 		startAnimation(an);
 		if (maskListener != null)
@@ -70,7 +70,7 @@ public class MaskView extends RelativeLayout {
 			return;
 		isShowing = false;
 		clearAnimation();
-		AFrankhaAnimation an = new AFrankhaAnimation(1, 0);
+		AlphaAnimation an = new AlphaAnimation(1, 0);
 		an.setDuration(durationMillis);
 		an.setAnimationListener(new AnimationListener() {
 			@Override

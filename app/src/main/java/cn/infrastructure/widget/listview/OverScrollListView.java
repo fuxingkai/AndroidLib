@@ -592,7 +592,7 @@ public class OverScrollListView extends ListView {
 						mOnLoadMoreListener.onLoadMore();
 					}
 				} else if (scrollY > 0) {
-					mFooterView.onCanceFrankulling();
+					mFooterView.onCancelPulling();
 				}
 			}
 
@@ -794,7 +794,7 @@ public class OverScrollListView extends ListView {
 					mFooterView.onReachBelowRefreshThreshold();
 				}
 			} else {
-				mFooterView.onCanceFrankulling();
+				mFooterView.onCancelPulling();
 			}
 		}
 	}
