@@ -3,6 +3,339 @@
 
     <item
         is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\c0d12eb02e0c3cdf2fe020b070f64e79fdf4d803\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6666dd525c3da197e7d07f4f23ef5fc7881a697b">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_7d46f1ae7b00e8a015a7db6ff274df62e4aa0de8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\d253c3c18506469adb8acdfbb3949485424d1aaa\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_a0c95ccddc47596f75cb7feb28b63db2a9cc5889.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.2.1\d6f54d76edfbe779a50a8636b10fd3f555d8f780\butterknife-annotations-8.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d6f54d76edfbe779a50a8636b10fd3f555d8f780">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\butterknife-annotations-8.2.1_6530ed4492c039feb8759382d5b87e8d74717dad.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\13e59a5260e2427212f8ba2643c4beaeea3222e6\output\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\internal_impl-25.0.0_d3a1585704d0b1b3dadf39b8e0eef9abf7fc553a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\retrofit-2.1.0_02cdaa5f093e78b272a8b951b62057cb62740b8d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\adt-bundle-windows-x86_64-20131030\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.0\support-annotations-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\support-annotations-25.0.0_7a0a44b86d05aa33e838555b5a6a3755a9a464d5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.8\f9dbae366a6a3d6b5041c5e8db0dcdfdc35c27b5\rxjava-1.1.8.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f9dbae366a6a3d6b5041c5e8db0dcdfdc35c27b5">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\rxjava-1.1.8_292ae3995d1eed9d8e95f69ea1728f88ec6efa5c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\02256c93cb4f97a733bbf0bebca61c64c890a530\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_25efc1bae228181bacad8362e95fbbba77f70902.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\01e78a827d7eb8dfe870773f6680e316449e6cf2\output\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\internal_impl-25.0.0_256aed78d0ca8a51d115efb0aa84673863d7b904.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\ide\android-studio\gradle\m2repository\com\android\databinding\baseLibrary\2.3.0\baseLibrary-2.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="cf0b6ab1d94f770655f81657b93fce2ba4cd331d">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\baseLibrary-2.3.0_add799b1d603d11265e3c2474cbcdc877b4daee2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Frank\gitWorkspace\AndroidLib\app\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9718a3d0578e0b0d5748111d05d10ce439f01d76">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_970dbb5f71ec7d1107494664abae66352e75417b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\129c52a34024a9f8060817a1090fd2dcea832a8d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_03b58f822a06cabdd20f250c3d50a6782d21d172.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\caea0c04a6a91c2c07861656664bd6a3c1a2df7a\output\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_8c8848cce2b43c3f03a9f8338a90f95791575d0e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\931cf45cf3e60f1747f67a5ac749c6a84f53d5f6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_05e302be628251b82b5e5cd4161b89934c3a155c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\android\adt-bundle-windows-x86_64-20131030\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.0\support-annotations-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\support-annotations-25.0.0_7a0a44b86d05aa33e838555b5a6a3755a9a464d5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.8\f9dbae366a6a3d6b5041c5e8db0dcdfdc35c27b5\rxjava-1.1.8.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f9dbae366a6a3d6b5041c5e8db0dcdfdc35c27b5">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\rxjava-1.1.8_292ae3995d1eed9d8e95f69ea1728f88ec6efa5c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\cn.jufuns\androidlib\1.0.0-SNAPSHOT\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d06efa5687f477d853333dd46962e09404ee0e43">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\cn.jufuns-androidlib-1.0.0-SNAPSHOT_241cd00bcb428e803ae68c93a88447484085d545.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\25df4a3224f791e1d6f742994138de927749f9a3\output\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_723579c3aff053587c2479645107671fde76b8fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\1b395f26e70c5e860596b1bed69f06f639e21317\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_a8db96a7148f76c1eccde8ae86fddd5f79f7e570.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\77264317059b5a48ab66c5a14534fff71515b31a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_d69b7b638a8e024ed955bd9b545a27b6dae05da5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.dagger\dagger\2.4\6b290a792253035c9fcc912d6a4d7efb3e850211\dagger-2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="6b290a792253035c9fcc912d6a4d7efb3e850211">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\dagger-2.4_e2df89d18085d74ab9dc06f7fbd4d1811a876f86.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\00b20787f26bc523d0ed2f597f9cc680e125a1ba\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_5d98a2775686acd7185a74bc8360de9ff6c53164.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\gson-2.7_2e85dbf641c4a16c73925139bd4ff50ebb0450dd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\f3b62e1d623f03ab58ef313ca6ded0ee579aad3c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="68956f5ba1517b7a3d513ba540548e257741cbae">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_8d43e33e77b24fa2982dee6f90a929be11f0ca11.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.2.1\d6f54d76edfbe779a50a8636b10fd3f555d8f780\butterknife-annotations-8.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d6f54d76edfbe779a50a8636b10fd3f555d8f780">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\butterknife-annotations-8.2.1_6530ed4492c039feb8759382d5b87e8d74717dad.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\41b39004d97f426633de96cd69021798ac2c4cd0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_b9dcaf1f96757489bf2898ae155ccb8f87fead63.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\gson-2.7_2e85dbf641c4a16c73925139bd4ff50ebb0450dd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\retrofit-2.1.0_02cdaa5f093e78b272a8b951b62057cb62740b8d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\69d01519f00c12deb6ceecfa56f2409183fa2c89\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7f2f348b830f292429db987f74ba3e67c6752322">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_a69ec3ec857fb4093c95d59acda26a822cc34eac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\caea0c04a6a91c2c07861656664bd6a3c1a2df7a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_b693ccdc805db673fd87fab22f69e5b4b83fbfbd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\25df4a3224f791e1d6f742994138de927749f9a3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_0c7e7459e38081e2fd30e3ea4732c73582941ef6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\bd4d412f6ff142ea6089f61312a0390a18463163\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6666dd525c3da197e7d07f4f23ef5fc7881a697b">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_a303f438d3659a5f4fd108a506f5c32be10ff84d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.dagger\dagger\2.4\6b290a792253035c9fcc912d6a4d7efb3e850211\dagger-2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6b290a792253035c9fcc912d6a4d7efb3e850211">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\dagger-2.4_e2df89d18085d74ab9dc06f7fbd4d1811a876f86.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\02256c93cb4f97a733bbf0bebca61c64c890a530\output\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_4aaf49c722dd489b78b976ab4f3d9fc4facebf9c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\931cf45cf3e60f1747f67a5ac749c6a84f53d5f6\output\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\internal_impl-25.0.0_62f30f0bededca5fa39a5a2772eb558771637172.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\99a56eb2fea7ab634ab02511db05e2b280664705\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_69d8e8147f2fbbcb4e929b9b36f0f72245ecca5f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\org.greenrobot\greendao-api\3.1.0\4669bc7c200009695ba1e990bd4eddac243a00a\greendao-api-3.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="04669bc7c200009695ba1e990bd4eddac243a00a">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\greendao-api-3.1.0_001842f2f789d37518891dddd0f0c24c09dc15be.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\org.greenrobot\greendao\3.1.0\70d6a26bba227c2736606a5eb6edc3c15ac0ad6a\greendao-3.1.0.jar"
         jumboMode="false"
         optimize="true"
@@ -12,84 +345,48 @@
     </item>
     <item
         is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\classes.jar"
+        jar="C:\Users\Administrator\.android\build-cache\91f5bfecac77541d2e25a13e8c3bc8a7d7d0ae8d\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.0.0_a2a9788d58638ea0928db2e6969b67634c1a8ed4.jar" />
+        revision="25.0.0"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_9cfe5114a4a21d4d8481e7f175382ec25926e243.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\classes.jar"
+        jar="C:\Users\Administrator\.android\build-cache\9d7ae49d4e98b2582288274bcebbc05f74714043\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="26674000177e45447a0326a6ad84612761199a13">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.0.0_c605fec84947ba31df2079406e5119cc476b00ae.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
+        revision="25.0.0"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.0.0_833e5546072fffe1307018a5589ca3d598b658e6.jar" />
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_24545aa4658945ad3145251f2a9bf8e517b87b13.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.jakewharton\butterknife\8.2.1\jars\classes.jar"
+        jar="C:\Users\Administrator\.android\build-cache\3bbaceb3a8a4cd91d7a135e5ba0f9069a6a2c813\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="ca5e58104f56f918f0fb3a5b1b371ab599ae56b2">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\com.jakewharton-butterknife-8.2.1_36f43e598bcba4c6da2da3dae72528ca057d09ab.jar" />
+        revision="25.0.0"
+        sha1="13e4a228366811ef6357e2b976c1b79b86bf4128">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_a05167026d1ecd84aebb7af978a63dc17af6ff9b.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.android.databinding\adapters\1.2.1\jars\classes.jar"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="c56d29136c2257f63f08c29c4e739efb03b06c7d">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\com.android.databinding-adapters-1.2.1_de95bf47f94f04a58fdb9b825ce9b39fe7f0ba81.jar" />
+        revision="25.0.0"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\okio-1.9.0_db0545b090bbd931e1cf6e43202e038727277a7d.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\classes.jar"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.0.0_024770831cef5d2a6ee9835d1236b1f8f6030586.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\io.reactivex\rxandroid\1.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\io.reactivex-rxandroid-1.2.1_46b9a37415904af9e9d321108efd0f206634ed97.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\ide\android-studio\gradle\m2repository\com\android\databinding\baseLibrary\2.2.3\baseLibrary-2.2.3.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="b4b51d1925cdfda98fd861230c1ecb5855500129">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\baseLibrary-2.2.3_655282d593bc9a0ce4cca46c75c9e19394d61bce.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.alipay.euler\andfix\0.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="d5ca379ee8755a160363244ff228c701201abc64">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\com.alipay.euler-andfix-0.4.0_d21f187d9f28ce18d6bfc08abb1847167e15de04.jar" />
+        revision="25.0.0"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\javax.inject-1_273da2ba53aedc2691b5c6c4485ebe7b12b6e634.jar" />
     </item>
     <item
         is-multidex="false"
@@ -111,12 +408,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jar="C:\Users\Administrator\.android\build-cache\77264317059b5a48ab66c5a14534fff71515b31a\output\jars\libs\internal_impl-25.0.0.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_cbeb37a7e0549fc5bc040e7fb0e27bae4578d58c.jar" />
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\internal_impl-25.0.0_91bd56e486aed76801874f7b48bb09c6cac9f7f6.jar" />
     </item>
     <item
         is-multidex="false"
@@ -129,147 +426,111 @@
     </item>
     <item
         is-multidex="false"
-        jar="D:\android\adt-bundle-windows-x86_64-20131030\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.0\support-annotations-25.0.0.jar"
+        jar="C:\Users\Administrator\.android\build-cache\00b20787f26bc523d0ed2f597f9cc680e125a1ba\output\jars\libs\internal_impl-25.0.0.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\support-annotations-25.0.0_7a0a44b86d05aa33e838555b5a6a3755a9a464d5.jar" />
+        revision="25.0.0"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_4d88265410f458045043397c855f66068385ba79.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\classes.jar"
+        jar="C:\Users\Administrator\.android\build-cache\129c52a34024a9f8060817a1090fd2dcea832a8d\output\jars\libs\internal_impl-25.0.0.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.0.0_4af370e0cc8daab4805d9028b54066a90e54b2ca.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.8\f9dbae366a6a3d6b5041c5e8db0dcdfdc35c27b5\rxjava-1.1.8.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="f9dbae366a6a3d6b5041c5e8db0dcdfdc35c27b5">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\rxjava-1.1.8_292ae3995d1eed9d8e95f69ea1728f88ec6efa5c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.0.0_29f3a479fa33e4e02a505f146c0b09613f41107a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_fd6e774143d522eaa3a96b70fb492d8c84085a99.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.android.databinding\library\1.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="957dc30b1495f8689271e00d56ab09cc9192df02">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\com.android.databinding-library-1.2.1_a861e4bb44df562e2a7c92b6714b68bda75cf9bf.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.android.support\multidex\1.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="6666dd525c3da197e7d07f4f23ef5fc7881a697b">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\com.android.support-multidex-1.0.0_ee3bd57ffa9c9f3d1e4079b0d58fe1af14ee6e8d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.0.0_133c4912951eeaba16589c217fa8fd3945c8a60b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.dagger\dagger\2.4\6b290a792253035c9fcc912d6a4d7efb3e850211\dagger-2.4.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="6b290a792253035c9fcc912d6a4d7efb3e850211">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\dagger-2.4_e2df89d18085d74ab9dc06f7fbd4d1811a876f86.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.0.0_4a83d967eb9d8dc22feadcb9380ad5ad302891a0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\gson-2.7_2e85dbf641c4a16c73925139bd4ff50ebb0450dd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
+        revision="25.0.0"
         sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_78d87eeda661f4fbf9a1f795ea13223c50496824.jar" />
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\internal_impl-25.0.0_c4d5eea23f2d878bae6180e960dbad6dcfa9b2ad.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.2.1\d6f54d76edfbe779a50a8636b10fd3f555d8f780\butterknife-annotations-8.2.1.jar"
+        jar="C:\Users\Administrator\.android\build-cache\b00f844e16c8f5a559d12e26e93db8525f543eaa\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="d6f54d76edfbe779a50a8636b10fd3f555d8f780">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\butterknife-annotations-8.2.1_6530ed4492c039feb8759382d5b87e8d74717dad.jar" />
+        revision="25.0.0"
+        sha1="7f2f348b830f292429db987f74ba3e67c6752322">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_1fcc1c8869108d1d495f85e20d99fea018514a3e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jar="C:\Users\Administrator\.android\build-cache\13e59a5260e2427212f8ba2643c4beaeea3222e6\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_b8706ef26bed93e4bc4489ed44fb97a001a2470c.jar" />
+        revision="25.0.0"
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_d093d77607fd003e55513520fccf41cb8ee043f6.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\cn.jufuns\androidlib\1.0.0-SNAPSHOT\jars\classes.jar"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="d06efa5687f477d853333dd46962e09404ee0e43">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\cn.jufuns-androidlib-1.0.0-SNAPSHOT_241cd00bcb428e803ae68c93a88447484085d545.jar" />
+        revision="25.0.0"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\okhttp-3.4.1_a3a718343956c6e4d917a53a4fdd4a4dc134cda5.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
+        jar="C:\Users\Administrator\.android\build-cache\01e78a827d7eb8dfe870773f6680e316449e6cf2\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\retrofit-2.1.0_02cdaa5f093e78b272a8b951b62057cb62740b8d.jar" />
+        revision="25.0.0"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_a3005137fe0d292999578eb42b4e10ec791f2f34.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\964bd59b4945bb146962914f77df911d8e5e5728\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_e703f9178a652a1181f7d996bcb2ceb90e1dafa9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\org.greenrobot\greendao\3.1.0\70d6a26bba227c2736606a5eb6edc3c15ac0ad6a\greendao-3.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="70d6a26bba227c2736606a5eb6edc3c15ac0ad6a">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\greendao-3.1.0_c7c207da6259415b572f9f034d17147e6921d9b1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\e5bf9df7b1287c06eacd79cb26b7b0c69d5ca46a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_e09df08ce72f2a38e8821a03f0705251a478361e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\652befd91375710db0d65bcdfa0d0eb1dd8320c9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_3e320dcfc530eb7c10a811ee2f8c1c8172dc42da.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\7513aa8caa65fb8abcfcca2d2016b39053b5b60c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ca5e58104f56f918f0fb3a5b1b371ab599ae56b2">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_96403376549d7302025dd4da7439dececc206057.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\99a56eb2fea7ab634ab02511db05e2b280664705\output\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_d0eebef43720410700fc8944c558d8da80e130a6.jar" />
     </item>
     <item
         is-multidex="false"
@@ -282,21 +543,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.0\jars\classes.jar"
+        jar="C:\Users\Administrator\.android\build-cache\899cc0b9daac7d51d831d907ae121a4576272d83\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.0.0_810180212241ea81ab771c57d2833d943c00edd3.jar" />
+        revision="25.0.0"
+        sha1="68956f5ba1517b7a3d513ba540548e257741cbae">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_80c1ef1678c22811c98c17952c2735ca6b886dc7.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jar="C:\Users\Administrator\.android\build-cache\b4e34f8976b45b9870cd7bb0e6f3f2573c9746d6\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_759b6b6a77b99711363cada43fe321354c25c997.jar" />
+        revision="25.0.0"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_ece974acd87bd06f0fafdfa7c6f940ebaac4d943.jar" />
     </item>
 
 </items>

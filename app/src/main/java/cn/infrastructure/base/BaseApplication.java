@@ -1,14 +1,12 @@
 package cn.infrastructure.base;
 
-import android.app.Application;
 import android.support.multidex.MultiDexApplication;
 
 import com.alipay.euler.andfix.patch.PatchManager;
 
-import cn.infrastructure.common.Config;
 import cn.infrastructure.utils.AppUtils;
 import cn.infrastructure.utils.ToastUtil;
-import cn.infrastructure.utils.log.QLog;
+import cn.infrastructure.log.QLog;
 
 /**
  * 所有应用启动入口（Application类）的基类，与业务逻辑无关

@@ -10,7 +10,7 @@ import cn.infrastructure.utils.DateUtils;
 import cn.infrastructure.utils.NetWorkUtils;
 import cn.infrastructure.utils.Utils;
 import cn.infrastructure.utils.data.JsonUtils;
-import cn.infrastructure.utils.log.QLog;
+import cn.infrastructure.log.QLog;
 
 /**
  * Created by Frank on 2016/9/28.

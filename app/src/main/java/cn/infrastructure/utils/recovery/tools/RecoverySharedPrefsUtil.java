@@ -1,15 +1,5 @@
 package cn.infrastructure.utils.recovery.tools;
 
-import android.app.ActivityManager;
-import android.content.Context;
-import android.os.Build;
-
-import cn.infrastructure.db.entity.CrashLog;
-import cn.infrastructure.utils.DateUtils;
-import cn.infrastructure.utils.NetWorkUtils;
-import cn.infrastructure.utils.Utils;
-import cn.infrastructure.utils.data.JsonUtils;
-import cn.infrastructure.utils.log.QLog;
 import cn.infrastructure.utils.recovery.core.CrashData;
 import cn.infrastructure.utils.recovery.core.Recovery;
 import cn.infrastructure.utils.recovery.exception.RecoveryException;

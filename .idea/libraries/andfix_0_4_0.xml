@@ -1,13 +1,12 @@
 <component name="libraryTable">
   <library name="andfix-0.4.0">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.alipay.euler/andfix/0.4.0/res" />
-      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.alipay.euler/andfix/0.4.0/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/3bbaceb3a8a4cd91d7a135e5ba0f9069a6a2c813/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/3bbaceb3a8a4cd91d7a135e5ba0f9069a6a2c813/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.alipay.euler/andfix/0.4.0/9a9b87061e759db1e90faf7778e6abac9dc52928/andfix-0.4.0-sources.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.alipay.euler/andfix/0.4.0/9a9b87061e759db1e90faf7778e6abac9dc52928/andfix-0.4.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.alipay.euler/andfix/0.4.0/143d15cca629d570193a0b602cf8b9efbc7e5290/andfix-0.4.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

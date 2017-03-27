@@ -15,10 +15,6 @@ public class Config {
         Config.debug = debug;
     }
 
-    public static void setHost(String host) {
-        SecretConstant.API_HOST = host;
-    }
-
     /**
      * 设置设备类型 0 话机 1 手机
      * 默认值为话机

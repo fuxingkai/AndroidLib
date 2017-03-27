@@ -4,7 +4,10 @@ import android.util.Log;
 
 import cn.infrastructure.base.BaseApplication;
 import cn.infrastructure.common.Config;
+import cn.infrastructure.http.RetrofitClient;
+import cn.infrastructure.http.factory.DefaultFactory;
 import cn.infrastructure.lib.example.activity.MainActivity;
+import cn.infrastructure.utils.AppUtils;
 import cn.infrastructure.utils.data.JsonUtils;
 import cn.infrastructure.utils.recovery.callback.RecoveryCallback;
 import cn.infrastructure.utils.recovery.core.Recovery;
@@ -14,6 +17,8 @@ import cn.infrastructure.utils.recovery.core.Recovery;
 public class AppApplication extends BaseApplication {
 
     public static AppApplication instance;
+
+    private RetrofitClient retrofitClient;
 
     @Override
     public void onCreate() {
@@ -43,6 +48,21 @@ public class AppApplication extends BaseApplication {
 //            }
 //        });
 
+        String url = "http://172.16.1.9:8280";
+
+        retrofitClient = new RetrofitClient.
+                Builder().
+                url(url).
+                addRROFactory(new DefaultFactory()).
+                build();
+    }
+
+    /**
+     * 获得RetrofitClient
+     * @return
+     */
+    public RetrofitClient getRetrofitClient(){
+        return retrofitClient;
     }
 
     static final class MyCrashCallback implements RecoveryCallback {
