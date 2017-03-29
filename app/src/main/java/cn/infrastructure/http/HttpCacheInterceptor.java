@@ -13,6 +13,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /**
+ * 网络缓存拦截器
  * @author Frank
  * @date: 2016-07-12
  * 

@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import cn.infrastructure.http.HttpLoggingInterceptor;
 import cn.infrastructure.http.retrofit.gson.GsonConverterFactory;
-import cn.infrastructure.http.retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import cn.infrastructure.http.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import cn.infrastructure.log.QLog;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
@@ -64,7 +64,7 @@ public class DefaultFactory implements RROFactory {
                 .client(createOkHttpClient())//设置请求
                 .baseUrl(baseUrl)//设置请求的域名
                 .addConverterFactory(GsonConverterFactory.create())//设置类型强转
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
     }
 
@@ -80,7 +80,7 @@ public class DefaultFactory implements RROFactory {
                 .client(okHttpClient)//设置请求
                 .baseUrl(baseUrl)//设置请求的域名
                 .addConverterFactory(GsonConverterFactory.create())//设置类型强转
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
     }
 }

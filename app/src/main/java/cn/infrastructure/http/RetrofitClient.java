@@ -2,18 +2,21 @@ package cn.infrastructure.http;
 
 import android.text.TextUtils;
 
-import cn.infrastructure.entity.Response;
+import cn.infrastructure.http.entity.Response;
 import cn.infrastructure.http.exception.HttpApiException;
 import cn.infrastructure.http.factory.RROFactory;
+import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.ObservableSource;
+import io.reactivex.ObservableTransformer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.Function;
+import io.reactivex.schedulers.Schedulers;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
-import rx.Observable;
-import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Func1;
-import rx.schedulers.Schedulers;
 
-import static cn.infrastructure.http.Utils.checkNotNull;
+import static cn.infrastructure.http.RROUtil.checkNotNull;
 
 /**
  * Retrofit请求发起门面
@@ -112,22 +115,21 @@ public class RetrofitClient {
      * @param <T>
      * @return
      */
-    public <T> Observable.Transformer<Response<T>, T> applySchedulers() {
-        return (Observable.Transformer<Response<T>, T>) transformer;
+    public <T> ObservableTransformer<Response<T>, T> applySchedulers() {
+        return (ObservableTransformer<Response<T>, T>) transformer;
     }
 
-    final Observable.Transformer transformer = new Observable.Transformer() {
+    final ObservableTransformer transformer = new ObservableTransformer() {
         @Override
-        public Object call(Object observable) {
-            return ((Observable) observable).subscribeOn(Schedulers.io())
+        public ObservableSource apply(Observable upstream) {
+            return upstream.subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
-                    .flatMap(new Func1() {
+                    .flatMap(new Function() {
                         @Override
-                        public Object call(Object response) {
+                        public Object apply(Object response) throws Exception {
                             return flatResponse((Response<Object>) response);
                         }
-                    })
-                    ;
+                    });
         }
     };
 
@@ -138,29 +140,28 @@ public class RetrofitClient {
      * @param <T>
      * @return
      */
-    public <T> Observable<T> flatResponse(final Response<T> response) {
-        return Observable.create(new Observable.OnSubscribe<T>() {
-
+    public <T> Observable<T> flatResponse(final Response<T> response){
+        return Observable.create(new ObservableOnSubscribe<T>() {
             @Override
-            public void call(Subscriber<? super T> subscriber) {
+            public void subscribe(ObservableEmitter<T> subscriber) throws Exception {
                 if (response.isSuccess()) {
-                    if (!subscriber.isUnsubscribed()) {
+                    if (!subscriber.isDisposed()) {
                         subscriber.onNext(response.response_data);
                     }
                 } else {
-                    if (!subscriber.isUnsubscribed()) {
+                    if (!subscriber.isDisposed()) {
                         subscriber.onError(new HttpApiException(response.ret_code, response.ret_msg));
                     }
                     return;
                 }
 
-                if (!subscriber.isUnsubscribed()) {
-                    subscriber.onCompleted();
+                if (!subscriber.isDisposed()) {
+                    subscriber.onComplete();
                 }
-
             }
         });
     }
+
 
     /**
      * RetrofitClient创造者

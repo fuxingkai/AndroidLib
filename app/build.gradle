@@ -25,8 +25,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.0'
     compile "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
     compile "com.squareup.okhttp3:okhttp:$rootProject.ext.okhttpVersion"
-    compile "io.reactivex:rxjava:$rootProject.ext.rxjavaVersion"
-    compile "io.reactivex:rxandroid:$rootProject.ext.rxandroidVersion"
+    compile "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxjavaVersion"
+    compile "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxandroidVersion"
     compile "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
     compile "com.squareup.okio:okio:$rootProject.ext.okioVersion"
     compile "com.alipay.euler:andfix:$rootProject.ext.andfixVersion"

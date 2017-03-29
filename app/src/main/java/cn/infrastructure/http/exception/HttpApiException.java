@@ -1,7 +1,7 @@
 package cn.infrastructure.http.exception;
 
 import cn.infrastructure.common.AppConstants;
-import cn.infrastructure.entity.Response;
+import cn.infrastructure.http.entity.Response;
 
 /**
  *

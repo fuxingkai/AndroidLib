@@ -1,18 +1,21 @@
 package cn.infrastructure.lib.example.activity;
 
 import android.app.Activity;
-import android.app.Application;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.reactivestreams.Subscriber;
+
 import java.util.HashMap;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-import cn.infrastructure.entity.Request;
 import cn.infrastructure.http.MediaTypeConst;
 import cn.infrastructure.http.RetrofitClient;
+import cn.infrastructure.http.encryp.HearderType;
+import cn.infrastructure.http.entity.Request;
 import cn.infrastructure.lib.example.AppApplication;
 import cn.infrastructure.lib.example.R;
 import cn.infrastructure.lib.example.api.APIService;
@@ -20,18 +23,13 @@ import cn.infrastructure.lib.example.contract.LoginContract;
 import cn.infrastructure.lib.example.data.source.entity.LoginReq;
 import cn.infrastructure.lib.example.data.source.entity.OperInfoResp;
 import cn.infrastructure.log.QLog;
-import cn.infrastructure.rxbus.annotation.Produce;
-import cn.infrastructure.rxbus.annotation.Subscribe;
-import cn.infrastructure.rxbus.annotation.Tag;
-import cn.infrastructure.rxbus.thread.EventThread;
-import cn.infrastructure.utils.ToastUtil;
 import cn.infrastructure.utils.data.JsonUtils;
+import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 import okhttp3.RequestBody;
-import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action1;
-import rx.functions.Func1;
-import rx.schedulers.Schedulers;
+
 
 /**
  * Created by Administrator on 2016/8/5.
@@ -51,6 +49,14 @@ public class MainActivity extends Activity implements LoginContract.View {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        postTest();
+    }
+
+    /**
+     * post请求测试
+     */
+    private void postTest() {
         LoginReq loginReq = new LoginReq();
         loginReq.operPwd = "aaa";//密码
         loginReq.operId = "dsfsdfs";//用户
@@ -58,14 +64,22 @@ public class MainActivity extends Activity implements LoginContract.View {
 
         QLog.i("sdfs","sdfsdf");
         RetrofitClient client = AppApplication.instance.getRetrofitClient();
+        Map<String,String> headers = new HashMap<String,String>();
+        headers.put(HearderType.BASE_AUTH,"bce-auth-v1/1214242fff");
+        headers.put(HearderType.SECRET_ACCESS_KEY,"2343f");
         client.getService(APIService.class)
-                .doPhoneLogin((RequestBody.create(MediaTypeConst.MEDIATYPE_JSON, JsonUtils.toJson(request))))
+                .doPhoneLogin(headers,(RequestBody.create(MediaTypeConst.MEDIATYPE_JSON, JsonUtils.toJson(request))))
                 .compose(client.<OperInfoResp>applySchedulers())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<OperInfoResp>() {
+                .subscribe(new Observer<OperInfoResp>() {
                     @Override
-                    public void onCompleted() {
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(OperInfoResp value) {
 
                     }
 
@@ -75,62 +89,15 @@ public class MainActivity extends Activity implements LoginContract.View {
                     }
 
                     @Override
-                    public void onNext(OperInfoResp operInfoResp) {
+                    public void onComplete() {
 
                     }
                 });
     }
 
-//    @Override
-//    protected void init() {
-//        QLog.init("LibExample").briefMode();
-//        QLog.d("这是log测试");
-//        JsonObject jsonObject=new JsonObject();
-//        jsonObject.addProperty("ddddd",true);
-//        jsonObject.addProperty("lsjaj","sdfeeeeee");
-//        QLog.json(jsonObject.toString());
-
-
-//        RxBus.get().register(this);
-
-//        produceFoods();
-//        loadingDlg.show("发送失败，短信费已用完，请联系管理员续费！");
-//        String a = NumberUtils.foematInteger(0);
-//        ToastUtil.showMidleToast(a + "");
-
-//        tvTest.setFocusableInTouchMode(true);
-//        tvTest.setFocusable(true);
-//        tvTest.setClickable(true);
-//        tvTest.setLongClickable(true);
-//        tvTest.setMovementMethod(ArrowKeyMovementMethod.getInstance());
-//        tvTest.setText(tvTest.getText(), TextView.BufferType.SPANNABLE);
-
-//    }
-
-    @Subscribe(
-            thread = EventThread.MAIN_THREAD,
-            tags = {
-                    @Tag("foods")
-            }
-    )
-    public void eatFoods(String food) {
-        ToastUtil.show(food);
-    }
-
-    @Produce(
-            thread = EventThread.MAIN_THREAD,
-            tags = {
-                    @Tag("foods")
-            }
-    )
-    public String produceFoods() {
-        return "苹果";
-    }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
-//        RxBus.get().unregister(this);
     }
 
     @OnClick(R.id.main_btn_login)

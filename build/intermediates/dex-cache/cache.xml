@@ -3,21 +3,21 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\c0d12eb02e0c3cdf2fe020b070f64e79fdf4d803\output\jars\classes.jar"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\io.reactivex.rxjava2\rxjava\2.0.1\57f850a6b317e5582f1dbaff10a9e7d7e1fcdcfb\rxjava-2.0.1.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="6666dd525c3da197e7d07f4f23ef5fc7881a697b">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_7d46f1ae7b00e8a015a7db6ff274df62e4aa0de8.jar" />
+        sha1="57f850a6b317e5582f1dbaff10a9e7d7e1fcdcfb">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\rxjava-2.0.1_88fc17d5d72694fd01b893bb935156af845d463f.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\d253c3c18506469adb8acdfbb3949485424d1aaa\output\jars\classes.jar"
+        jar="C:\Users\Administrator\.android\build-cache\00e611d2ab1a338d048e9e599433b5cbe4294202\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_a0c95ccddc47596f75cb7feb28b63db2a9cc5889.jar" />
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_8c5ff73df79bb007a06981b7b4690869a0b3e4b8.jar" />
     </item>
     <item
         is-multidex="false"
@@ -66,21 +66,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\02256c93cb4f97a733bbf0bebca61c64c890a530\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_25efc1bae228181bacad8362e95fbbba77f70902.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\Administrator\.android\build-cache\01e78a827d7eb8dfe870773f6680e316449e6cf2\output\jars\libs\internal_impl-25.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\internal_impl-25.0.0_256aed78d0ca8a51d115efb0aa84673863d7b904.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\b8a9de31180d457c89c743b1a75b9c32f70ed4a7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_59e1f7093068b25763b9844b57ccb1b7fbe63552.jar" />
     </item>
     <item
         is-multidex="false"
@@ -97,8 +97,17 @@
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="9718a3d0578e0b0d5748111d05d10ce439f01d76">
+        sha1="837fe212393345ee9a74f01c2f7c49910b376021">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_970dbb5f71ec7d1107494664abae66352e75417b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\00e611d2ab1a338d048e9e599433b5cbe4294202\output\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_5485482f93a0d9555a28dc50585a4aeb9d1fe0c6.jar" />
     </item>
     <item
         is-multidex="false"
@@ -111,12 +120,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\caea0c04a6a91c2c07861656664bd6a3c1a2df7a\output\jars\libs\internal_impl-25.0.0.jar"
+        jar="C:\Users\Administrator\.android\build-cache\3592aaecf86a7c31a98e1177733868dff8f4f1d6\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_8c8848cce2b43c3f03a9f8338a90f95791575d0e.jar" />
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_9777d70115a550b043c62487565a96cb79b271ae.jar" />
     </item>
     <item
         is-multidex="false"
@@ -138,30 +147,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.8\f9dbae366a6a3d6b5041c5e8db0dcdfdc35c27b5\rxjava-1.1.8.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="f9dbae366a6a3d6b5041c5e8db0dcdfdc35c27b5">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\rxjava-1.1.8_292ae3995d1eed9d8e95f69ea1728f88ec6efa5c.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\exploded-aar\cn.jufuns\androidlib\1.0.0-SNAPSHOT\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="d06efa5687f477d853333dd46962e09404ee0e43">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\cn.jufuns-androidlib-1.0.0-SNAPSHOT_241cd00bcb428e803ae68c93a88447484085d545.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\25df4a3224f791e1d6f742994138de927749f9a3\output\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_723579c3aff053587c2479645107671fde76b8fa.jar" />
     </item>
     <item
         is-multidex="false"
@@ -192,12 +183,30 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\00b20787f26bc523d0ed2f597f9cc680e125a1ba\output\jars\classes.jar"
+        jar="C:\Users\Administrator\.android\build-cache\3592aaecf86a7c31a98e1177733868dff8f4f1d6\output\jars\libs\internal_impl-25.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_5d98a2775686acd7185a74bc8360de9ff6c53164.jar" />
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_4f4ddc58b31d6735e616161874d9e36a8a466338.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\109b2b931c0fc7e673a08a4d028f99a828f191dd\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4119ea97a7191ff9b8f33b534ea220448f62f491">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_2dc687ba5a9b306bdb271f19ddf6b2372037a30f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\03faea95d62a8d11a0ad51a05ed8be9bd196569d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_a7e80e0c392210a36f962d3aebbb4e7fd3b8e0dd.jar" />
     </item>
     <item
         is-multidex="false"
@@ -228,6 +237,24 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\5b79b80ead42a74072bf6fa967a1e44a614837d6\output\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_becfd1a4c3c0e90702a5055dbcfb59c7aa753a36.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\b8a9de31180d457c89c743b1a75b9c32f70ed4a7\output\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_2fa67fe3d2f95c018bdd4db1966dae4f836806f7.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Administrator\.android\build-cache\41b39004d97f426633de96cd69021798ac2c4cd0\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -246,39 +273,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\retrofit-2.1.0_02cdaa5f093e78b272a8b951b62057cb62740b8d.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\Administrator\.android\build-cache\69d01519f00c12deb6ceecfa56f2409183fa2c89\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="7f2f348b830f292429db987f74ba3e67c6752322">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_a69ec3ec857fb4093c95d59acda26a822cc34eac.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\caea0c04a6a91c2c07861656664bd6a3c1a2df7a\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="26674000177e45447a0326a6ad84612761199a13">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_b693ccdc805db673fd87fab22f69e5b4b83fbfbd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\25df4a3224f791e1d6f742994138de927749f9a3\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_0c7e7459e38081e2fd30e3ea4732c73582941ef6.jar" />
     </item>
     <item
         is-multidex="false"
@@ -291,6 +291,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\20804bbc3efdd899e6d84887e4fe366f58a3b785\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_6e5419c47fa95e84ef10bd8c60b45f23dc364c7b.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.dagger\dagger\2.4\6b290a792253035c9fcc912d6a4d7efb3e850211\dagger-2.4.jar"
         jumboMode="false"
         optimize="true"
@@ -300,12 +309,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\02256c93cb4f97a733bbf0bebca61c64c890a530\output\jars\libs\internal_impl-25.0.0.jar"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.11.0\840897fcd7223a8143f1d9b6f69714e7be34fd50\okio-1.11.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_4aaf49c722dd489b78b976ab4f3d9fc4facebf9c.jar" />
+        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\okio-1.11.0_893d7cba6fd833c845f42c6194f7ff7a73716aa7.jar" />
     </item>
     <item
         is-multidex="false"
@@ -315,15 +324,6 @@
         revision="25.0.0"
         sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\internal_impl-25.0.0_62f30f0bededca5fa39a5a2772eb558771637172.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\99a56eb2fea7ab634ab02511db05e2b280664705\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_69d8e8147f2fbbcb4e929b9b36f0f72245ecca5f.jar" />
     </item>
     <item
         is-multidex="false"
@@ -345,30 +345,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\91f5bfecac77541d2e25a13e8c3bc8a7d7d0ae8d\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_9cfe5114a4a21d4d8481e7f175382ec25926e243.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\9d7ae49d4e98b2582288274bcebbc05f74714043\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_24545aa4658945ad3145251f2a9bf8e517b87b13.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\Administrator\.android\build-cache\3bbaceb3a8a4cd91d7a135e5ba0f9069a6a2c813\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="13e4a228366811ef6357e2b976c1b79b86bf4128">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_a05167026d1ecd84aebb7af978a63dc17af6ff9b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\d4cf867680b57509cd1d8addfc1824ffd28a4959\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6666dd525c3da197e7d07f4f23ef5fc7881a697b">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_5991d8cb9a8c4f557f03a6245d1b5d430885e218.jar" />
     </item>
     <item
         is-multidex="false"
@@ -381,6 +372,24 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\a6f9c5aef438c7c90fa3d93405b2b565a60df3d6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_bb8df0a7d8010c74a703b0aee914c634e97e6a96.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\210c95321db9b7b9659678858d13480bbd6f80a8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_22ec46f0cdb10c9d8e76127c513e2fc5fb08a434.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
         jumboMode="false"
         optimize="true"
@@ -390,21 +399,21 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\a6f9c5aef438c7c90fa3d93405b2b565a60df3d6\output\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_8ec2b7a13d6c879bf1d0b3e742dd843dfb8acd36.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\org.greenrobot\greendao-api\3.1.0\4669bc7c200009695ba1e990bd4eddac243a00a\greendao-api-3.1.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="04669bc7c200009695ba1e990bd4eddac243a00a">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\greendao-api-3.1.0_001842f2f789d37518891dddd0f0c24c09dc15be.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\okio-1.9.0_db0545b090bbd931e1cf6e43202e038727277a7d.jar" />
     </item>
     <item
         is-multidex="false"
@@ -426,12 +435,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\00b20787f26bc523d0ed2f597f9cc680e125a1ba\output\jars\libs\internal_impl-25.0.0.jar"
+        jar="C:\Users\Administrator\.android\build-cache\022a25ce7aaacfc872cfb6796f47ebb7e310ac39\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_4d88265410f458045043397c855f66068385ba79.jar" />
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_ebba72ea93494a02e7ae0e35c9c87418254c35ce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\0c6b2fd3e5fd79b5359bbd89516c366f7135c1fd\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7f2f348b830f292429db987f74ba3e67c6752322">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_c6e513c7d6a4b0669ae81b401b636fae3ce25632.jar" />
     </item>
     <item
         is-multidex="false"
@@ -441,15 +459,6 @@
         revision="25.0.0"
         sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\internal_impl-25.0.0_c4d5eea23f2d878bae6180e960dbad6dcfa9b2ad.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\b00f844e16c8f5a559d12e26e93db8525f543eaa\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="7f2f348b830f292429db987f74ba3e67c6752322">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_1fcc1c8869108d1d495f85e20d99fea018514a3e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -489,21 +498,21 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.2.0\41e67dba73c3347e4503761642c39d0e06ca1f2\retrofit-2.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="041e67dba73c3347e4503761642c39d0e06ca1f2">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\retrofit-2.2.0_5127af66b76a6a65810e00277050022b19264d6f.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\org.greenrobot\greendao\3.1.0\70d6a26bba227c2736606a5eb6edc3c15ac0ad6a\greendao-3.1.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="70d6a26bba227c2736606a5eb6edc3c15ac0ad6a">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\greendao-3.1.0_c7c207da6259415b572f9f034d17147e6921d9b1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\e5bf9df7b1287c06eacd79cb26b7b0c69d5ca46a\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_e09df08ce72f2a38e8821a03f0705251a478361e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -516,6 +525,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.6.0\69edde9fc4b01c9fd51d25b83428837478c27254\okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\okhttp-3.6.0_1efc6a5eb9346389ba0de2f5ee10a5fa311da347.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Administrator\.android\build-cache\7513aa8caa65fb8abcfcca2d2016b39053b5b60c\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -525,30 +543,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\99a56eb2fea7ab634ab02511db05e2b280664705\output\jars\libs\internal_impl-25.0.0.jar"
+        jar="C:\Users\Administrator\.android\build-cache\5b79b80ead42a74072bf6fa967a1e44a614837d6\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_d0eebef43720410700fc8944c558d8da80e130a6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\okhttp-3.4.1_a3a718343956c6e4d917a53a4fdd4a4dc134cda5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\899cc0b9daac7d51d831d907ae121a4576272d83\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="68956f5ba1517b7a3d513ba540548e257741cbae">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_80c1ef1678c22811c98c17952c2735ca6b886dc7.jar" />
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_7d37b5f7973a1b91ee7d024a6f883068e8f70fdc.jar" />
     </item>
     <item
         is-multidex="false"
@@ -558,6 +558,24 @@
         revision="25.0.0"
         sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_ece974acd87bd06f0fafdfa7c6f940ebaac4d943.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\cb55ffe1e3d9b03b2bea35d982eeb6ca3f898de6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="68956f5ba1517b7a3d513ba540548e257741cbae">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_22cc1c5620be20c6d5a6e2acf11705a218497379.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\org.reactivestreams\reactive-streams\1.0.0\14b8c877d98005ba3941c9257cfe09f6ed0e0d74\reactive-streams-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="14b8c877d98005ba3941c9257cfe09f6ed0e0d74">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\reactive-streams-1.0.0_5ea215fafe26757b3eaa9e791da078c680959e41.jar" />
     </item>
 
 </items>

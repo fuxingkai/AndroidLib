@@ -5,10 +5,9 @@ import android.util.Log;
 import cn.infrastructure.base.BaseApplication;
 import cn.infrastructure.common.Config;
 import cn.infrastructure.http.RetrofitClient;
+import cn.infrastructure.http.factory.AuthFactory;
 import cn.infrastructure.http.factory.DefaultFactory;
 import cn.infrastructure.lib.example.activity.MainActivity;
-import cn.infrastructure.utils.AppUtils;
-import cn.infrastructure.utils.data.JsonUtils;
 import cn.infrastructure.utils.recovery.callback.RecoveryCallback;
 import cn.infrastructure.utils.recovery.core.Recovery;
 /**
@@ -53,7 +52,7 @@ public class AppApplication extends BaseApplication {
         retrofitClient = new RetrofitClient.
                 Builder().
                 url(url).
-                addRROFactory(new DefaultFactory()).
+                addRROFactory(new AuthFactory()).
                 build();
     }
 

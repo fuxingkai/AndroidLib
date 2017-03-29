@@ -1,5 +1,6 @@
 package cn.infrastructure.http.factory;
 
+import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 
@@ -9,6 +10,7 @@ import retrofit2.Retrofit;
  */
 
 public interface RROFactory{
+
     /**
      * 获得OkHttpClient 实例
      * @return

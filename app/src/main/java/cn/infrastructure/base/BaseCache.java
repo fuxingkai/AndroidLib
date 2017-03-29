@@ -1,5 +1,7 @@
 package cn.infrastructure.base;
 
+import android.text.TextUtils;
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
@@ -8,7 +10,6 @@ import java.util.HashMap;
 import cn.infrastructure.common.AppConstants;
 import cn.infrastructure.utils.ToastUtil;
 import cn.infrastructure.utils.Utils;
-import cn.infrastructure.utils.data.StringUtils;
 
 /**
  * 缓存基类，与业务逻辑无关
@@ -16,10 +17,10 @@ import cn.infrastructure.utils.data.StringUtils;
  * if (null == instance) {
  * synchronized (this) {
  * if (null == instance) {
- * Object object = Utils.restoreObject(
+ * Object object = RROUtil.restoreObject(
  * AppConstants.CACHEDIR + this.getClass().getSimpleName());
  * if (object == null) {
- * Utils.saveObject(
+ * RROUtil.saveObject(
  * AppConstants.CACHEDIR + this.getClass().getSimpleName(), object);
  * }
  * instance = (AppCache) object;
@@ -105,7 +106,7 @@ public abstract class BaseCache implements Serializable, Cloneable {
      * @param cache
      */
     public void save(BaseCache cache) {
-        if (StringUtils.isEmpty(cache_key)) {
+        if (TextUtils.isEmpty(cache_key)) {
             ToastUtil.show("BaseCache's cache can not be null");
             return;
         }
@@ -118,7 +119,7 @@ public abstract class BaseCache implements Serializable, Cloneable {
      * @param fileName
      */
     public void save(BaseCache cache, String fileName) {
-        if (StringUtils.isEmpty(cache_key)) {
+        if (TextUtils.isEmpty(cache_key)) {
             ToastUtil.show("filename can not be null");
             return;
         }

@@ -1,5 +1,7 @@
 package cn.infrastructure.log;
 
+import android.text.TextUtils;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -26,7 +28,6 @@ import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
 import cn.infrastructure.utils.Utils;
-import cn.infrastructure.utils.data.StringUtils;
 
 final class LoggerPrinter implements Printer {
 
@@ -179,7 +180,7 @@ final class LoggerPrinter implements Printer {
      */
     @Override
     public void json(String json) {
-        if (StringUtils.isEmpty(json)) {
+        if (TextUtils.isEmpty(json)) {
             d("Empty/Null json content");
             return;
         }
@@ -210,7 +211,7 @@ final class LoggerPrinter implements Printer {
      */
     @Override
     public void xml(String xml) {
-        if (StringUtils.isEmpty(xml)) {
+        if (TextUtils.isEmpty(xml)) {
             d("Empty/Null xml content");
             return;
         }
@@ -311,7 +312,7 @@ final class LoggerPrinter implements Printer {
             message = "No message/exception is set";
         }
         int methodCount = getMethodCount();
-        if (StringUtils.isEmpty(message)) {
+        if (TextUtils.isEmpty(message)) {
             message = "Empty/NULL log message";
         }
 
@@ -479,7 +480,7 @@ final class LoggerPrinter implements Printer {
     }
 
     private String formatTag(String tag) {
-        if (!StringUtils.isEmpty(tag) && !Helper.equals(this.tag, tag)) {
+        if (!TextUtils.isEmpty(tag) && !Helper.equals(this.tag, tag)) {
             return this.tag + "-" + tag;
         }
         return this.tag;

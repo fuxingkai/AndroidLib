@@ -7,7 +7,7 @@ import android.util.TypedValue;
 /**
  * 像素转换类
  * <p>
- * Created by linpei on 2016/9/20.
+ * Created by Frank on 2016/9/20.
  */
 public class DensityUtil {
     /**
