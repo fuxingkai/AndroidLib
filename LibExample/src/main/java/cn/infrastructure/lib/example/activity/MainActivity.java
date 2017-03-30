@@ -2,10 +2,9 @@ package cn.infrastructure.lib.example.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
-
-import org.reactivestreams.Subscriber;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,7 +18,6 @@ import cn.infrastructure.http.entity.Request;
 import cn.infrastructure.lib.example.AppApplication;
 import cn.infrastructure.lib.example.R;
 import cn.infrastructure.lib.example.api.APIService;
-import cn.infrastructure.lib.example.contract.LoginContract;
 import cn.infrastructure.lib.example.data.source.entity.LoginReq;
 import cn.infrastructure.lib.example.data.source.entity.OperInfoResp;
 import cn.infrastructure.log.QLog;
@@ -34,9 +32,7 @@ import okhttp3.RequestBody;
 /**
  * Created by Administrator on 2016/8/5.
  */
-public class MainActivity extends Activity implements LoginContract.View {
-
-    private LoginContract.Presenter loginPresenter;
+public class MainActivity extends Activity {
 
     @BindView(R.id.main_btn_login)
     Button btnLogin;
@@ -75,22 +71,23 @@ public class MainActivity extends Activity implements LoginContract.View {
                 .subscribe(new Observer<OperInfoResp>() {
                     @Override
                     public void onSubscribe(Disposable d) {
-
+                        Log.i("cache","onSubscribe");
                     }
 
                     @Override
                     public void onNext(OperInfoResp value) {
-
+                        Log.i("cache","onNext");
+                        Log.i("cache",JsonUtils.toJson(value));
                     }
 
                     @Override
                     public void onError(Throwable e) {
-
+                        Log.i("cache","onError");
                     }
 
                     @Override
                     public void onComplete() {
-
+                        Log.i("cache","onComplete");
                     }
                 });
     }
@@ -105,10 +102,5 @@ public class MainActivity extends Activity implements LoginContract.View {
 
         TextView textView = null;
         textView.setText("");
-    }
-
-    @Override
-    public void setupListeners() {
-
     }
 }

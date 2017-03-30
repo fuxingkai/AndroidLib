@@ -20,12 +20,12 @@
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\210c95321db9b7b9659678858d13480bbd6f80a8\\output\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
-        "merged": "D:\\Frank\\gitWorkspace\\AndroidLib\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_text_cursor_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\210c95321db9b7b9659678858d13480bbd6f80a8\\output\\res\\drawable\\abc_text_cursor_material.xml"
-    },
-    {
         "merged": "D:\\Frank\\gitWorkspace\\AndroidLib\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ratingbar_small_material.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\210c95321db9b7b9659678858d13480bbd6f80a8\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "D:\\Frank\\gitWorkspace\\AndroidLib\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\210c95321db9b7b9659678858d13480bbd6f80a8\\output\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
         "merged": "D:\\Frank\\gitWorkspace\\AndroidLib\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_holo_dark.xml",

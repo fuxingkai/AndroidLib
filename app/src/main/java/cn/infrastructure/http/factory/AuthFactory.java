@@ -1,12 +1,13 @@
 package cn.infrastructure.http.factory;
 
+import android.util.Log;
+
 import java.util.concurrent.TimeUnit;
 
 import cn.infrastructure.http.HttpAuthInterceptor;
 import cn.infrastructure.http.HttpLoggingInterceptor;
 import cn.infrastructure.http.retrofit.gson.GsonConverterFactory;
 import cn.infrastructure.http.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
-import cn.infrastructure.log.QLog;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 
@@ -15,6 +16,16 @@ import retrofit2.Retrofit;
  * Created by Frank on 2017/3/27 0024.
  */
 public class AuthFactory implements RROFactory {
+
+    OkHttpClient.Builder okHttpBuilder;//okHttp的构建者
+    Retrofit.Builder retrofitBuilder;//Retrofit的构建者
+
+    public AuthFactory(){}
+
+    public AuthFactory(OkHttpClient.Builder okHttpBuilder, Retrofit.Builder retrofitBuilder) {
+        this.okHttpBuilder = okHttpBuilder;
+        this.retrofitBuilder = retrofitBuilder;
+    }
 
     /**
      * 获得OkHttpClient实例
@@ -28,21 +39,24 @@ public class AuthFactory implements RROFactory {
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
             @Override
             public void log(String message) {
-                QLog.i("RRO", message);
+                Log.d("RRO", message);
             }
         });
 
+        /**
+         * 实例一个鉴权拦截器
+         */
         HttpAuthInterceptor httpAuthInterceptor = new HttpAuthInterceptor();
 
         /**
          * 实例话OkHttpClient
          */
-        OkHttpClient client = new OkHttpClient.Builder()
+        OkHttpClient client = null == okHttpBuilder ? new OkHttpClient.Builder()
                 .readTimeout(20000, TimeUnit.MILLISECONDS)//读取数据超时时间
                 .connectTimeout(20000, TimeUnit.MILLISECONDS)//请求链接超时时间
                 .addInterceptor(loggingInterceptor)//log拦截器
-                .addInterceptor(httpAuthInterceptor)//鉴权拦截器
-                .build();
+                .addNetworkInterceptor(httpAuthInterceptor)//鉴权拦截器
+                .build() : okHttpBuilder.build();
         return client;
     }
 
@@ -64,12 +78,12 @@ public class AuthFactory implements RROFactory {
      */
     @Override
     public Retrofit createRetrofit(String baseUrl) {
-        return new Retrofit.Builder()
+        return null == retrofitBuilder ? new Retrofit.Builder()
                 .client(createOkHttpClient())//设置请求
                 .baseUrl(baseUrl)//设置请求的域名
                 .addConverterFactory(GsonConverterFactory.create())//设置类型强转
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .build();
+                .build() : retrofitBuilder.baseUrl(baseUrl).build();
     }
 
     /**
@@ -80,11 +94,11 @@ public class AuthFactory implements RROFactory {
      */
     @Override
     public Retrofit createRetrofit(OkHttpClient okHttpClient, String baseUrl) {
-        return new Retrofit.Builder()
+        return null == retrofitBuilder ? new Retrofit.Builder()
                 .client(okHttpClient)//设置请求
                 .baseUrl(baseUrl)//设置请求的域名
                 .addConverterFactory(GsonConverterFactory.create())//设置类型强转
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .build();
+                .build() : retrofitBuilder.baseUrl(baseUrl).build();
     }
 }

@@ -23,6 +23,8 @@ dependencies {
 //    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile "junit:junit:$rootProject.ext.junitVersion"
     compile 'com.android.support:appcompat-v7:25.0.0'
+    compile "com.trello.rxlifecycle2:rxlifecycle-android:$rootProject.ext.rxlifecycleAndroidVersion"
+    compile "com.trello.rxlifecycle2:rxlifecycle-components:$rootProject.ext.rxlifecycleComponentsVersion"
     compile "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
     compile "com.squareup.okhttp3:okhttp:$rootProject.ext.okhttpVersion"
     compile "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxjavaVersion"

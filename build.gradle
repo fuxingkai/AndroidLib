@@ -49,4 +49,6 @@ ext {
     andfixVersion = '0.4.0@aar'
     greenDaoVersion = '3.1.0'
     androidlib_version = '1.0.0-SNAPSHOT'
+    rxlifecycleAndroidVersion = '2.0.1'
+    rxlifecycleComponentsVersion = '2.0.1'
 }

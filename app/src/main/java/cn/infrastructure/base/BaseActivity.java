@@ -29,8 +29,6 @@ public abstract class BaseActivity extends Activity {
     protected Context mContext;//当前Activity的上下文
     private SystemBarTintManager tintManager;
     protected LoadingDialog loadingDlg;
-    //本页面中所使用的Presenter 当页面被销毁时，取消所有请求，以防内存泄漏
-    protected ArrayList<BasePresenter> mPresenters = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +41,6 @@ public abstract class BaseActivity extends Activity {
         }
 
         bindView();
-
-        loadingDlg = new LoadingDialog(this);
 
         init();
     }
@@ -117,86 +113,19 @@ public abstract class BaseActivity extends Activity {
     }
 
     /**
-     * 通过Class跳转界面
-     *
-     * @param cls
+     * 初始化加载弹窗
      */
-    public void startActivity(Class<?> cls) {
-        startActivity(cls, null);
-    }
-
-    /**
-     * 含有Bundle通过Class跳转界面
-     *
-     * @param intent
-     * @param cls
-     */
-    public void startActivity(Intent intent, Class<?> cls) {
-        intent.setClass(this, cls);
-        startActivity(intent);
-    }
-
-    /**
-     * 含有Bundle通过Class跳转界面
-     *
-     * @param cls
-     * @param bundle
-     */
-    public void startActivity(Class<?> cls, Bundle bundle) {
-        Intent intent = new Intent();
-        intent.setClass(this, cls);
-        if (bundle != null) {
-            intent.putExtras(bundle);
+    protected void initLoadDlg(){
+        if(null == loadingDlg){
+            loadingDlg = new LoadingDialog(this);
         }
-        startActivity(intent);
-    }
-
-    /**
-     * 通过Class跳转界面
-     *
-     * @param intent
-     * @param cls
-     * @param requestCode
-     */
-    public void startActivityForResult(Intent intent, Class<?> cls, int requestCode) {
-        intent.setClass(this, cls);
-        startActivityForResult(intent, requestCode);
-    }
-
-
-    /**
-     * 通过Class跳转界面
-     *
-     * @param cls
-     * @param requestCode
-     */
-    public void startActivityForResult(Class<?> cls, int requestCode) {
-        startActivityForResult(cls, null, requestCode);
-    }
-
-    /**
-     * 含有Bundle通过Class跳转界面
-     *
-     * @param cls
-     * @param bundle
-     * @param requestCode
-     */
-    public void startActivityForResult(Class<?> cls, Bundle bundle,
-                                       int requestCode) {
-        Intent intent = new Intent();
-        intent.setClass(this, cls);
-        if (bundle != null) {
-            intent.putExtras(bundle);
-        }
-        startActivityForResult(intent, requestCode);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        loadingDlg.dismiss();
-        for (int i = 0, size = mPresenters.size(); i < size; i++) {
-            mPresenters.get(i).cancelAllRequest();
+        if(null != loadingDlg){
+            loadingDlg.dismiss();
         }
     }
 

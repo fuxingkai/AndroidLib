@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import cn.infrastructure.http.encryp.AuthUtil;
 import cn.infrastructure.http.encryp.HearderType;
+import cn.infrastructure.http.factory.AuthFactory;
 import okhttp3.HttpUrl;
 import okhttp3.Interceptor;
 import okhttp3.MediaType;
@@ -94,21 +95,26 @@ public class HttpAuthInterceptor implements Interceptor{
         RequestBody body = request.body();
 
         if (body != null) {
-            MediaType contentType = body.contentType();
-
-            if (contentType != null) {
-                requestBuilder.header(HearderType.CONTENT_TYPE, contentType.toString());
-            }
-
-            long contentLength = body.contentLength();
-
-            if (contentLength != -1) {
-                requestBuilder.header(HearderType.CONTENT_LENGTH, Long.toString(contentLength));
-                requestBuilder.removeHeader(HearderType.TRANSFER_ENCODING);
-            } else {
-                requestBuilder.header(HearderType.TRANSFER_ENCODING, "chunked");
-                requestBuilder.removeHeader(HearderType.CONTENT_LENGTH);
-            }
+            /**
+             * 视请求头是否要全部进行而决定，如果要全部鉴权，该部分代码需要注释掉，并且用addNetworkInterceptor {@link okhttp3.OkHttpClient.Builder#addNetworkInterceptor(Interceptor)}
+             * 否则放开注释，只进行CONTENT_TYPE；CONTENT_LENGTH；CONTENT_MD5；HOST这四个请求头进行鉴权 {@link HearderType#CONTENT_TYPE}
+             * 具体要看{@link AuthFactory#createOkHttpClient()}
+             */
+//            MediaType contentType = body.contentType();
+//
+//            if (contentType != null) {
+//                requestBuilder.header(HearderType.CONTENT_TYPE, contentType.toString());
+//            }
+//
+//            long contentLength = body.contentLength();
+//
+//            if (contentLength != -1) {
+//                requestBuilder.header(HearderType.CONTENT_LENGTH, Long.toString(contentLength));
+//                requestBuilder.removeHeader(HearderType.TRANSFER_ENCODING);
+//            } else {
+//                requestBuilder.header(HearderType.TRANSFER_ENCODING, "chunked");
+//                requestBuilder.removeHeader(HearderType.CONTENT_LENGTH);
+//            }
 
             requestBuilder.header(HearderType.CONTENT_MD5,AuthUtil.get128MD5ToBase64(body));
         }

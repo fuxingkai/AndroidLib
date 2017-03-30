@@ -28,12 +28,12 @@
         "source": "D:\\Frank\\gitWorkspace\\AndroidLib\\app\\build\\intermediates\\bundles\\debug\\res\\layout\\view_customer_toast.xml"
     },
     {
-        "merged": "D:\\Frank\\gitWorkspace\\AndroidLib\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\210c95321db9b7b9659678858d13480bbd6f80a8\\output\\res\\layout\\notification_template_icon_group.xml"
-    },
-    {
         "merged": "D:\\Frank\\gitWorkspace\\AndroidLib\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\layout_recovery_debug.xml",
         "source": "D:\\Frank\\gitWorkspace\\AndroidLib\\app\\build\\intermediates\\bundles\\debug\\res\\layout\\layout_recovery_debug.xml"
+    },
+    {
+        "merged": "D:\\Frank\\gitWorkspace\\AndroidLib\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\210c95321db9b7b9659678858d13480bbd6f80a8\\output\\res\\layout\\notification_template_icon_group.xml"
     },
     {
         "merged": "D:\\Frank\\gitWorkspace\\AndroidLib\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\dlg_loading.xml",

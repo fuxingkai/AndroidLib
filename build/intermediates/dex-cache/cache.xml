@@ -97,7 +97,7 @@
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="837fe212393345ee9a74f01c2f7c49910b376021">
+        sha1="a9f03d317d80e0083b4a23966c623bf7827d3eea">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_970dbb5f71ec7d1107494664abae66352e75417b.jar" />
     </item>
     <item
@@ -153,6 +153,15 @@
         revision="25.0.0"
         sha1="d06efa5687f477d853333dd46962e09404ee0e43">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\cn.jufuns-androidlib-1.0.0-SNAPSHOT_241cd00bcb428e803ae68c93a88447484085d545.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\09e4c007bbeac7adfbfc28dd8945e227e798e117\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e20f3c5e0e1bdbcf0edad8b16771497b36f68875">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_e606bc697ac4784e61bc50e0fe17bf1cf41edafc.jar" />
     </item>
     <item
         is-multidex="false"
@@ -444,12 +453,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\6d1d47b5f8376b364283b88d408073b8a28cab12\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a1589af4546e0299f3e0c77de3215ecfd3a0e19d">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_f1ebef4a2b70714dd899388a60fb9a1a0adc0106.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Administrator\.android\build-cache\0c6b2fd3e5fd79b5359bbd89516c366f7135c1fd\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="7f2f348b830f292429db987f74ba3e67c6752322">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_c6e513c7d6a4b0669ae81b401b636fae3ce25632.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.trello.rxlifecycle2\rxlifecycle\2.0.1\6a8613d3be37408630effe790c4945543633288\rxlifecycle-2.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="06a8613d3be37408630effe790c4945543633288">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\rxlifecycle-2.0.1_e40ac6bb629777b4d16adb614cbacf5b5045e759.jar" />
     </item>
     <item
         is-multidex="false"
