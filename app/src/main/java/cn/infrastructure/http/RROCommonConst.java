@@ -6,6 +6,6 @@ package cn.infrastructure.http;
  * @date: 2017/3/28 0028
  */
 
-public class CommonConst {
+public class RROCommonConst {
     public final static long EXPIRE_IN_SECONDS = 1800l;
 }

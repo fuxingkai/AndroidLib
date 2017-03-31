@@ -97,7 +97,7 @@
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="a9f03d317d80e0083b4a23966c623bf7827d3eea">
+        sha1="c0d9477b3b45b6fcac20a0cd5f6463267dd76abf">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_970dbb5f71ec7d1107494664abae66352e75417b.jar" />
     </item>
     <item
@@ -120,30 +120,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\3592aaecf86a7c31a98e1177733868dff8f4f1d6\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_9777d70115a550b043c62487565a96cb79b271ae.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\Administrator\.android\build-cache\931cf45cf3e60f1747f67a5ac749c6a84f53d5f6\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_05e302be628251b82b5e5cd4161b89934c3a155c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\android\adt-bundle-windows-x86_64-20131030\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.0\support-annotations-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\support-annotations-25.0.0_7a0a44b86d05aa33e838555b5a6a3755a9a464d5.jar" />
     </item>
     <item
         is-multidex="false"
@@ -192,15 +174,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\3592aaecf86a7c31a98e1177733868dff8f4f1d6\output\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_4f4ddc58b31d6735e616161874d9e36a8a466338.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\Administrator\.android\build-cache\109b2b931c0fc7e673a08a4d028f99a828f191dd\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -234,15 +207,6 @@
         revision="25.0.0"
         sha1="68956f5ba1517b7a3d513ba540548e257741cbae">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_8d43e33e77b24fa2982dee6f90a929be11f0ca11.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.2.1\d6f54d76edfbe779a50a8636b10fd3f555d8f780\butterknife-annotations-8.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="d6f54d76edfbe779a50a8636b10fd3f555d8f780">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\butterknife-annotations-8.2.1_6530ed4492c039feb8759382d5b87e8d74717dad.jar" />
     </item>
     <item
         is-multidex="false"
@@ -291,12 +255,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.5.1\bb67dad90bab7cd77a8f7f1b8442b47e3a2326bc\butterknife-annotations-8.5.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bb67dad90bab7cd77a8f7f1b8442b47e3a2326bc">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\butterknife-annotations-8.5.1_5290ebd889bdf836ef1f87a7f8bc931d4b8fa107.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Administrator\.android\build-cache\bd4d412f6ff142ea6089f61312a0390a18463163\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="6666dd525c3da197e7d07f4f23ef5fc7881a697b">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\release\classes_a303f438d3659a5f4fd108a506f5c32be10ff84d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\89359fe8e7a2a2f45780ccfd78aa2b07029b9a4d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="19f281a785ca0eb5f6799fc7bf7ca199a9ca1e8b">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_1a590db1582ec861bcb2ee106a847928d62d48c0.jar" />
     </item>
     <item
         is-multidex="false"
@@ -423,6 +405,15 @@
         revision="23.0.3"
         sha1="04669bc7c200009695ba1e990bd4eddac243a00a">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\greendao-api-3.1.0_001842f2f789d37518891dddd0f0c24c09dc15be.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\746123340f874064dfd580e4b99d4abb6eb77159\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_8d10cd842fffee7ab04b5dc4a7329d514af2ef0f.jar" />
     </item>
     <item
         is-multidex="false"

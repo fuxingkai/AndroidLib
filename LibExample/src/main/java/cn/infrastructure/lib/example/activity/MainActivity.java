@@ -6,11 +6,14 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.trello.rxlifecycle2.RxLifecycle;
+
 import java.util.HashMap;
 import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import cn.infrastructure.base.BaseActivity;
 import cn.infrastructure.http.MediaTypeConst;
 import cn.infrastructure.http.RetrofitClient;
 import cn.infrastructure.http.encryp.HearderType;
@@ -32,7 +35,7 @@ import okhttp3.RequestBody;
 /**
  * Created by Administrator on 2016/8/5.
  */
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivity {
 
     @BindView(R.id.main_btn_login)
     Button btnLogin;
@@ -46,13 +49,23 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        postTest();
+        postDefault();
+    }
+
+    @Override
+    protected int getLayoutResource() {
+        return 0;
+    }
+
+    @Override
+    protected void init() {
+
     }
 
     /**
      * post请求测试
      */
-    private void postTest() {
+    private void postDefault() {
         LoginReq loginReq = new LoginReq();
         loginReq.operPwd = "aaa";//密码
         loginReq.operId = "dsfsdfs";//用户
@@ -68,6 +81,7 @@ public class MainActivity extends Activity {
                 .compose(client.<OperInfoResp>applySchedulers())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
+                .compose(this.<OperInfoResp>bindToLifecycle())
                 .subscribe(new Observer<OperInfoResp>() {
                     @Override
                     public void onSubscribe(Disposable d) {

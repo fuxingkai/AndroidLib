@@ -51,4 +51,6 @@ ext {
     androidlib_version = '1.0.0-SNAPSHOT'
     rxlifecycleAndroidVersion = '2.0.1'
     rxlifecycleComponentsVersion = '2.0.1'
+    butterknifeVersion = '8.5.1'
+    butterknifeCompilerVersion = '8.5.1'
 }

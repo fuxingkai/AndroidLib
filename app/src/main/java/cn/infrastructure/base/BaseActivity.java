@@ -12,8 +12,12 @@ import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.view.Window;
 
+import com.trello.rxlifecycle2.components.RxActivity;
+import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
+
 import java.util.ArrayList;
 
+import butterknife.ButterKnife;
 import cn.infrastructure.ui.LoadingDialog;
 import cn.infrastructure.utils.SoftInputUtils;
 import cn.infrastructure.utils.SystemBarTintManager;
@@ -24,11 +28,11 @@ import cn.infrastructure.utils.Utils;
  *
  * @author Frank 2016-7-1
  */
-public abstract class BaseActivity extends Activity {
+public abstract class BaseActivity extends RxActivity {
 
     protected Context mContext;//当前Activity的上下文
-    private SystemBarTintManager tintManager;
-    protected LoadingDialog loadingDlg;
+    private SystemBarTintManager tintManager;//沉浸式控制类
+    protected LoadingDialog loadingDlg;//加载弹出
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +44,7 @@ public abstract class BaseActivity extends Activity {
             setContentView(getLayoutResource());
         }
 
-        bindView();
+        ButterKnife.bind(this);
 
         init();
     }
@@ -54,8 +58,6 @@ public abstract class BaseActivity extends Activity {
     }
 
     protected abstract int getLayoutResource();
-
-    protected abstract void bindView();
 
     protected abstract void init();
 
@@ -127,16 +129,6 @@ public abstract class BaseActivity extends Activity {
         if(null != loadingDlg){
             loadingDlg.dismiss();
         }
-    }
-
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        if (event.getAction() == MotionEvent.ACTION_UP) {
-            if (getCurrentFocus() != null && getCurrentFocus().getWindowToken() != null) {
-                SoftInputUtils.hideSoftForWindow(this);
-            }
-        }
-        return super.onTouchEvent(event);
     }
 
 }

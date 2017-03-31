@@ -22,7 +22,7 @@ import javax.crypto.Mac;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
-import cn.infrastructure.http.CommonConst;
+import cn.infrastructure.http.RROCommonConst;
 import okhttp3.Headers;
 import okhttp3.Request;
 import okhttp3.RequestBody;
@@ -131,7 +131,7 @@ public class AuthUtil {
      * @return
      */
     public static long getExpireInSeconds() {
-        return CommonConst.EXPIRE_IN_SECONDS;
+        return RROCommonConst.EXPIRE_IN_SECONDS;
     }
 
     /***

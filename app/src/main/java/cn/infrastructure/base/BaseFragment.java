@@ -1,21 +1,21 @@
 package cn.infrastructure.base;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
+import com.trello.rxlifecycle2.components.RxFragment;
+
+import butterknife.ButterKnife;
 
 /**
  * Fragment的基类，与业务逻辑无关
  *
  * @author Frank 2016-7-1
  */
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment extends RxFragment {
 
     protected View mFragmentView;
 
@@ -25,7 +25,7 @@ public abstract class BaseFragment extends Fragment {
         if (getLayoutResource() != 0) {
             mFragmentView = inflater.inflate(getLayoutResource(), container, false);
         }
-        bindView();
+        ButterKnife.bind(mFragmentView);
         return mFragmentView;
     }
 
@@ -36,8 +36,6 @@ public abstract class BaseFragment extends Fragment {
     }
 
     protected abstract int getLayoutResource();
-
-    protected abstract void bindView();
 
     protected abstract void init();
 
