@@ -34,19 +34,6 @@ public class AppApplication extends BaseApplication {
                 .callback(new MyCrashCallback())
                 .silent(false, Recovery.SilentMode.RECOVER_ACTIVITY_STACK)
                 .init(this);
-//
-//        AptPreferencesManager.init(this, new AptParser() {
-//
-//            @Override
-//            public Object deserialize(Class clazz, String text) {
-//                return JsonUtils.fromJson(text, clazz);
-//            }
-//
-//            @Override
-//            public String serialize(Object object) {
-//                return JsonUtils.toJson(object);
-//            }
-//        });
 
         String url = "http://172.16.1.9:8280";
 

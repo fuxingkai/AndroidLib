@@ -97,7 +97,7 @@
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="c0d9477b3b45b6fcac20a0cd5f6463267dd76abf">
+        sha1="edd61ac35e81d7e53f9685071437ea030162589d">
         <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_970dbb5f71ec7d1107494664abae66352e75417b.jar" />
     </item>
     <item

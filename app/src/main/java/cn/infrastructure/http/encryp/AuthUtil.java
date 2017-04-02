@@ -6,11 +6,13 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
@@ -24,9 +26,15 @@ import javax.crypto.spec.SecretKeySpec;
 
 import cn.infrastructure.http.RROCommonConst;
 import okhttp3.Headers;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okio.Buffer;
+import okio.BufferedSink;
+import okio.ByteString;
+
+import static android.util.Base64.CRLF;
 
 /**
  * 鉴权工具类
@@ -161,9 +169,13 @@ public class AuthUtil {
 
         try {
             requestBody.writeTo(buffer);
+            buffer.flush();
             return buffer.md5().base64();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            buffer.clear();
+            buffer.close();
         }
 
         return "";

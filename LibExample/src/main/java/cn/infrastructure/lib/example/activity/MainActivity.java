@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.trello.rxlifecycle2.RxLifecycle;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,9 +16,11 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import cn.infrastructure.base.BaseActivity;
 import cn.infrastructure.http.MediaTypeConst;
+import cn.infrastructure.http.ProgressRequestBody;
 import cn.infrastructure.http.RetrofitClient;
 import cn.infrastructure.http.encryp.HearderType;
 import cn.infrastructure.http.entity.Request;
+import cn.infrastructure.http.listener.UploadProgressListener;
 import cn.infrastructure.lib.example.AppApplication;
 import cn.infrastructure.lib.example.R;
 import cn.infrastructure.lib.example.api.APIService;
@@ -29,6 +32,8 @@ import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 
 
@@ -44,13 +49,7 @@ public class MainActivity extends BaseActivity {
     private int mTouchX;
     private int mTouchY;
     private final static int DEFAULT_SELECTION_LEN = 5;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        postDefault();
-    }
+    private RetrofitClient client = null;
 
     @Override
     protected int getLayoutResource() {
@@ -59,7 +58,63 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void init() {
+        client = AppApplication.instance.getRetrofitClient();
+        postDefault();
+        uploadeFile();
+    }
 
+    /**
+     * 文件上传
+     */
+    private void uploadeFile(){
+//        File file=new File("/storage/emulated/legacy/20161102.log");
+        File file=new File("/storage/emulated/legacy/1486630393256.jpg");
+//        File file=new File("/storage/emulated/legacy/1.log");
+        RequestBody requestBody=RequestBody.create(MediaType.parse("image/jpeg"),file);
+        MultipartBody.Part part= MultipartBody.Part.createFormData("file_name", file.getName(), new ProgressRequestBody(requestBody,
+                new UploadProgressListener() {
+                    @Override
+                    public void onProgress(long currentBytesCount, long totalBytesCount) {
+                        QLog.d("dddd"+currentBytesCount);
+                        QLog.d("dddd"+totalBytesCount);
+                        QLog.d("dddd"+currentBytesCount/totalBytesCount);
+                    }
+                }));
+        RequestBody uid= RequestBody.create(MediaType.parse("text/plain"), "4811420");
+        RequestBody key = RequestBody.create(MediaType.parse("text/plain"), "cfed6cc8caad0d79ea56d917376dc4df");
+
+        Map<String,String> headers = new HashMap<String,String>();
+        headers.put(HearderType.BASE_AUTH,"bce-auth-v1/1214242fff");
+        headers.put(HearderType.SECRET_ACCESS_KEY,"2343f");
+        client.getService(APIService.class)
+                .uploadImage(headers,uid,key,part)
+                .compose(client.<HashMap>applySchedulers())
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .compose(this.<HashMap>bindToLifecycle())
+                .subscribe(new Observer<HashMap>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                        Log.i("cache","onSubscribe");
+                    }
+
+                    @Override
+                    public void onNext(HashMap value) {
+                        Log.i("cache","onNext");
+                        Log.i("cache",JsonUtils.toJson(value));
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        e.printStackTrace();
+                        Log.i("cache","onError");
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        Log.i("cache","onComplete");
+                    }
+                });
     }
 
     /**
@@ -71,8 +126,6 @@ public class MainActivity extends BaseActivity {
         loginReq.operId = "dsfsdfs";//用户
         Request<LoginReq> request = new Request<LoginReq>(loginReq);
 
-        QLog.i("sdfs","sdfsdf");
-        RetrofitClient client = AppApplication.instance.getRetrofitClient();
         Map<String,String> headers = new HashMap<String,String>();
         headers.put(HearderType.BASE_AUTH,"bce-auth-v1/1214242fff");
         headers.put(HearderType.SECRET_ACCESS_KEY,"2343f");

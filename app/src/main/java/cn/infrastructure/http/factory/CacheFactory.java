@@ -9,6 +9,7 @@ import cn.infrastructure.http.HttpCacheInterceptor;
 import cn.infrastructure.http.HttpLoggingInterceptor;
 import cn.infrastructure.http.retrofit.gson.GsonConverterFactory;
 import cn.infrastructure.http.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import cn.infrastructure.log.QLog;
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
@@ -44,7 +45,7 @@ public class CacheFactory implements RROFactory {
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
             @Override
             public void log(String message) {
-                Log.d("RRO", message);
+                QLog.d(message);
             }
         });
 

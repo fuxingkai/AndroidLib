@@ -3,6 +3,7 @@ package cn.infrastructure.http;
 import okhttp3.MediaType;
 
 /**
+ * MediaType的常量
  * Created by Frank on 2017/3/27 0027.
  */
 

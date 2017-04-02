@@ -11,6 +11,15 @@ import okhttp3.MediaType;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import okhttp3.internal.connection.StreamAllocation;
+import okhttp3.internal.http.HttpCodec;
+import okhttp3.internal.http.HttpMethod;
+import okhttp3.internal.http.RealInterceptorChain;
+import okio.Buffer;
+import okio.BufferedSink;
+import okio.ForwardingSink;
+import okio.Okio;
+import okio.Sink;
 
 /**
  * 网络鉴权拦截器
@@ -86,6 +95,7 @@ public class HttpAuthInterceptor implements Interceptor{
      */
     @Override
     public Response intercept(Chain chain) throws IOException {
+
         /**
          * 获得请求
          */
