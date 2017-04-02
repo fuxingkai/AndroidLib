@@ -1,12 +1,8 @@
 package cn.infrastructure.lib.example.activity;
 
-import android.app.Activity;
-import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
-
-import com.trello.rxlifecycle2.RxLifecycle;
 
 import java.io.File;
 import java.util.HashMap;
@@ -16,11 +12,11 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import cn.infrastructure.base.BaseActivity;
 import cn.infrastructure.http.MediaTypeConst;
-import cn.infrastructure.http.ProgressRequestBody;
+import cn.infrastructure.http.PRequestBody;
 import cn.infrastructure.http.RetrofitClient;
 import cn.infrastructure.http.encryp.HearderType;
 import cn.infrastructure.http.entity.Request;
-import cn.infrastructure.http.listener.UploadProgressListener;
+import cn.infrastructure.http.listener.UlPListener;
 import cn.infrastructure.lib.example.AppApplication;
 import cn.infrastructure.lib.example.R;
 import cn.infrastructure.lib.example.api.APIService;
@@ -71,8 +67,8 @@ public class MainActivity extends BaseActivity {
         File file=new File("/storage/emulated/legacy/1486630393256.jpg");
 //        File file=new File("/storage/emulated/legacy/1.log");
         RequestBody requestBody=RequestBody.create(MediaType.parse("image/jpeg"),file);
-        MultipartBody.Part part= MultipartBody.Part.createFormData("file_name", file.getName(), new ProgressRequestBody(requestBody,
-                new UploadProgressListener() {
+        MultipartBody.Part part= MultipartBody.Part.createFormData("file_name", file.getName(), new PRequestBody(requestBody,
+                new UlPListener() {
                     @Override
                     public void onProgress(long currentBytesCount, long totalBytesCount) {
                         QLog.d("dddd"+currentBytesCount);

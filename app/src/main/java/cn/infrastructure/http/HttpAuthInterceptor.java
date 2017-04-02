@@ -7,19 +7,9 @@ import cn.infrastructure.http.encryp.HearderType;
 import cn.infrastructure.http.factory.AuthFactory;
 import okhttp3.HttpUrl;
 import okhttp3.Interceptor;
-import okhttp3.MediaType;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-import okhttp3.internal.connection.StreamAllocation;
-import okhttp3.internal.http.HttpCodec;
-import okhttp3.internal.http.HttpMethod;
-import okhttp3.internal.http.RealInterceptorChain;
-import okio.Buffer;
-import okio.BufferedSink;
-import okio.ForwardingSink;
-import okio.Okio;
-import okio.Sink;
 
 /**
  * 网络鉴权拦截器

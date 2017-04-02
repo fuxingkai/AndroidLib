@@ -2,7 +2,7 @@ package cn.infrastructure.http.factory;
 
 import java.util.concurrent.TimeUnit;
 
-import cn.infrastructure.http.HttpLoggingInterceptor;
+import cn.infrastructure.http.HttpLogInterceptor;
 import cn.infrastructure.http.retrofit.gson.GsonConverterFactory;
 import cn.infrastructure.http.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import cn.infrastructure.log.QLog;
@@ -35,7 +35,7 @@ public class DefaultFactory implements RROFactory {
         /**
          * 实例一个请求日志拦截器
          */
-        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
+        HttpLogInterceptor interceptor = new HttpLogInterceptor(new HttpLogInterceptor.Logger() {
             @Override
             public void log(String message) {
                 QLog.d(message);

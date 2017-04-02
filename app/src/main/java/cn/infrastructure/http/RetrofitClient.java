@@ -25,17 +25,31 @@ import static cn.infrastructure.http.RROUtil.checkNotNull;
 public class RetrofitClient {
 
     private String baseUrl = "";//默认服务器地址
+    private String dlBaseUrl = "";//下载服务器地址
 
     private Object service;//请求接口定义类
+    private Object dlService;//下载请求接口定义类
     private Retrofit retrofit;//Retrofit对象
-    private OkHttpClient okHttpClient;//OkHttpClient
+    private Retrofit dlRetrofit;//下载Retrofit对象
+    private OkHttpClient okHttpClient;//下载OkHttpClient
+    private OkHttpClient dlOkHttpClient;//下载OkHttpClient
     private RROFactory rroFactory;//Rxjava+Retrofit+OkHttp工厂类
+    private RROFactory dlRroFactory;//下载Rxjava+Retrofit+OkHttp工厂类
 
     private RetrofitClient(Builder builder) {
         this.baseUrl = builder.baseUrl;
+        this.dlBaseUrl = builder.dlBaseUrl;
         this.rroFactory = builder.rroFactory;
+        this.dlRroFactory = builder.dlRroFactory;
         okHttpClient = rroFactory.createOkHttpClient();
         retrofit = rroFactory.createRetrofit(okHttpClient,baseUrl);
+
+        if(TextUtils.isEmpty(dlBaseUrl) || null == dlRroFactory){
+            return;
+        }
+
+        dlOkHttpClient = dlRroFactory.createOkHttpClient();
+        dlRetrofit = dlRroFactory.createRetrofit(okHttpClient,dlBaseUrl);
     }
 
     /**
@@ -54,6 +68,15 @@ public class RetrofitClient {
         this.baseUrl = baseUrl;
     }
 
+
+    /**
+     * 重设下载dlBaseUrl
+     * @param dlBaseUrl
+     */
+    private void resetDlUrl(String dlBaseUrl){
+        this.dlBaseUrl = dlBaseUrl;
+    }
+
     /**
      * 重设Retrofit
      * @param okHttpClient
@@ -61,6 +84,15 @@ public class RetrofitClient {
      */
     private void resetRetrofit(OkHttpClient okHttpClient,String baseUrl){
         retrofit = rroFactory.createRetrofit(okHttpClient,baseUrl);
+    }
+
+    /**
+     * 重设dlRetrofit
+     * @param okHttpClient
+     * @param dlBaseUrl
+     */
+    private void resetDlRetrofit(OkHttpClient okHttpClient,String dlBaseUrl){
+        dlRetrofit = dlRroFactory.createRetrofit(okHttpClient,dlBaseUrl);
     }
 
     /**
@@ -78,6 +110,27 @@ public class RetrofitClient {
             }
         }
         return (A) service;
+    }
+
+    /**
+     * 获得Retrofit中Service实例
+     * @param clz
+     * @param <A>
+     * @return
+     */
+    public <A> A getDlService(Class<A> clz) {
+        if (dlBaseUrl == null) throw new IllegalStateException("dlBaseUrl == null");
+
+        if (dlRroFactory == null) throw new IllegalStateException("dlRroFactory == null");
+
+        if (dlService == null) {
+            synchronized (Object.class) {
+                if (dlService == null) {
+                    dlService = dlRetrofit.create(clz);
+                }
+            }
+        }
+        return (A) dlService;
     }
 
     /**
@@ -104,6 +157,36 @@ public class RetrofitClient {
         }
 
         return (A) service;
+    }
+
+    /**
+     * 获得Retrofit中Service实例
+     * @param clz
+     * @param host {@link RetrofitClient#dlBaseUrl}
+     * @param <A>
+     * @return
+     */
+    public <A> A getDlService(Class<A> clz, String host) {
+
+        if (dlBaseUrl == null) throw new IllegalStateException("dlBaseUrl == null");
+
+        if (dlRroFactory == null) throw new IllegalStateException("dlRroFactory == null");
+
+        if(!TextUtils.isEmpty(host)&&!host.equals(dlBaseUrl)){
+            dlService = null;
+            resetDlUrl(dlBaseUrl);
+            resetDlRetrofit(dlOkHttpClient,dlBaseUrl);
+        }
+
+        if (dlService == null) {
+            synchronized (Object.class) {
+                if (dlService == null) {
+                    dlService = dlRetrofit.create(clz);
+                }
+            }
+        }
+
+        return (A) dlService;
     }
 
     /**
@@ -168,7 +251,9 @@ public class RetrofitClient {
      */
     public static class Builder{
         private String baseUrl = "";//默认服务器地址
+        private String dlBaseUrl = "";//下载服务器地址
         private RROFactory rroFactory;//Rxjava+Retrofit+OkHttp工厂类
+        private RROFactory dlRroFactory;//下载Rxjava+Retrofit+OkHttp工厂类
 
         public Builder(){
 
@@ -176,7 +261,9 @@ public class RetrofitClient {
 
         private Builder(RetrofitClient retrofitClient) {
             this.baseUrl = retrofitClient.baseUrl;
+            this.dlBaseUrl = retrofitClient.dlBaseUrl;
             this.rroFactory = retrofitClient.rroFactory;
+            this.dlRroFactory = retrofitClient.dlRroFactory;
         }
 
         /**
@@ -186,6 +273,27 @@ public class RetrofitClient {
         public Builder url(String baseUrl) {
             checkNotNull(baseUrl, "baseUrl == null");
             this.baseUrl = baseUrl;
+            return this;
+        }
+
+        /**
+         * Set the API base baseUrl.
+         * @see Builder#dlBaseUrl
+         */
+        public Builder dlUrl(String dlBaseUrl) {
+            checkNotNull(dlBaseUrl, "baseUrl == null");
+            this.dlBaseUrl = dlBaseUrl;
+            return this;
+        }
+
+        /**
+         * 设置RROFactory工厂
+         * @param dlRroFactory
+         * @return
+         */
+        public Builder addDlRROFactory(RROFactory dlRroFactory){
+            checkNotNull(dlRroFactory, "dlRroFactory == null");
+            this.dlRroFactory = dlRroFactory;
             return this;
         }
 

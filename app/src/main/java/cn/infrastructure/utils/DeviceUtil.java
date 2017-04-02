@@ -1,6 +1,7 @@
 package cn.infrastructure.utils;
 
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build.VERSION;
@@ -297,5 +298,41 @@ public class DeviceUtil {
 		mac.init(secretKey);// 初始化mac
 		byte[] digest = mac.doFinal(data);// 执行消息摘要
 		return Hex.toHexString(digest);// 转为十六进制的字符串
+	}
+
+	/**
+	 * 获取应用版本号
+	 *
+	 * @param context
+	 * @return
+	 */
+	public static int getVersionCode(Context context) {
+		int i = -1;
+		try {
+			i = context.getPackageManager().getPackageInfo(
+					context.getPackageName(), 0).versionCode;
+
+		} catch (PackageManager.NameNotFoundException e) {
+			e.printStackTrace();
+		}
+		return i;
+	}
+
+	/**
+	 * 获取应用版本名称
+	 *
+	 * @param context
+	 * @return
+	 */
+	public static String getVersionName(Context context) {
+		String str = "";
+		try {
+			str = context.getPackageManager().getPackageInfo(
+					context.getPackageName(), 0).versionName;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "未知版本名";
+		}
+		return str;
 	}
 }

@@ -4,9 +4,9 @@ import android.support.multidex.MultiDexApplication;
 
 import com.alipay.euler.andfix.patch.PatchManager;
 
-import cn.infrastructure.utils.AppUtils;
-import cn.infrastructure.utils.ToastUtil;
 import cn.infrastructure.log.QLog;
+import cn.infrastructure.utils.DeviceUtil;
+import cn.infrastructure.utils.ToastUtil;
 
 /**
  * 所有应用启动入口（Application类）的基类，与业务逻辑无关
@@ -30,7 +30,7 @@ public class BaseApplication extends MultiDexApplication {
 
     private void initPatchManager() {
         patchManager = new PatchManager(this);
-        patchManager.init(AppUtils.getVersionName(this));
+        patchManager.init(DeviceUtil.getVersionName(this));
         patchManager.loadPatch();
     }
 

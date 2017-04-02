@@ -1,12 +1,10 @@
 package cn.infrastructure.http.factory;
 
-import android.util.Log;
-
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import cn.infrastructure.http.HttpCacheInterceptor;
-import cn.infrastructure.http.HttpLoggingInterceptor;
+import cn.infrastructure.http.HttpLogInterceptor;
 import cn.infrastructure.http.retrofit.gson.GsonConverterFactory;
 import cn.infrastructure.http.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import cn.infrastructure.log.QLog;
@@ -42,7 +40,7 @@ public class CacheFactory implements RROFactory {
         /**
          * 实例一个请求日志拦截器
          */
-        HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
+        HttpLogInterceptor loggingInterceptor = new HttpLogInterceptor(new HttpLogInterceptor.Logger() {
             @Override
             public void log(String message) {
                 QLog.d(message);
