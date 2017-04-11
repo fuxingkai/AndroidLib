@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\Frank\\gitWorkspace\\AndroidLib\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-mdpi-v4\\ic_titlebar_back.png",
+        "source": "D:\\Frank\\gitWorkspace\\AndroidLib\\library\\build\\intermediates\\bundles\\debug\\res\\mipmap-mdpi-v4\\ic_titlebar_back.png"
+    },
+    {
+        "merged": "D:\\Frank\\gitWorkspace\\AndroidLib\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
+        "source": "D:\\Frank\\gitWorkspace\\AndroidLib\\library\\build\\intermediates\\bundles\\debug\\res\\mipmap-mdpi-v4\\ic_launcher.png"
+    }
+]

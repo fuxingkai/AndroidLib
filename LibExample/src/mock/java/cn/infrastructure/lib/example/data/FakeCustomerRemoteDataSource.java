@@ -1,4 +1,4 @@
-package cn.infrastructure.lib.example.data;
+package frank.basis.lib.example.data;
 
 public class FakeCustomerRemoteDataSource{
 

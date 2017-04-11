@@ -17,6 +17,11 @@ android {
         enabled true
     }
 
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -41,8 +46,13 @@ android {
 }
 
 dependencies {
-    compile project(':app')
+    compile project(':library')
     compile 'com.google.dagger:dagger:2.4'
     apt 'com.google.dagger:dagger-compiler:2.4'
 //    compile "cn.jufuns:androidlib:$rootProject.ext.androidlib_version"
+}
+
+task javadocs(type: Javadoc) {
+    options.encoding 'UTF-8'
+    options.charSet 'UTF-8'
 }
