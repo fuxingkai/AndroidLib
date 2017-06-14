@@ -5,6 +5,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.basis.lib.example.AppApplication;
+import com.basis.lib.example.R;
 import com.basis.lib.example.api.APIService;
 import com.basis.lib.example.data.source.entity.LoginReq;
 import com.basis.lib.example.data.source.entity.OperInfoResp;
@@ -25,7 +26,6 @@ import frank.basis.http.listener.UlPListener;
 import frank.basis.log.QLog;
 import frank.basis.utils.data.JsonUtils;
 
-import cn.infrastructure.lib.example.R;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;

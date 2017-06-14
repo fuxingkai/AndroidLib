@@ -49,9 +49,9 @@ dependencies {
 
 publish {
     userOrg = 'biedou'
-    groupId = 'frank.basis'
+    groupId = 'frank.basis.library'
     artifactId = 'library'
-    version = '1.0.0'
+    version = '1.0.1'
     description = 'Super duper easy way to release your Android and other artifacts to bintray'
     website = "https://github.com/fuxingkai/AndroidLib"
 }

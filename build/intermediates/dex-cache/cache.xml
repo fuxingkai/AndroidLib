@@ -3,12 +3,12 @@
 
     <item
         is-multidex="false"
-        jar="D:\Frank\gitWorkspace\AndroidLib\library\build\intermediates\bundles\default\classes.jar"
+        jar="D:\ide\android-studio\gradle\m2repository\com\android\databinding\baseLibrary\2.3.2\baseLibrary-2.3.2.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="6153a0cc6b5460f9aeab22b05cdc5d9d0e89ae97">
-        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\classes_05cd3a711769582bbef7f57a308636ff4d9fdc16.jar" />
+        sha1="3162679b4009fde859f7eb61c93b6f44d85b3233">
+        <dex dex="D:\Frank\gitWorkspace\AndroidLib\LibExample\build\intermediates\pre-dexed\debug\baseLibrary-2.3.2_0a2050e05c188e6b2f752f304ec4363bb1829952.jar" />
     </item>
 
 </items>

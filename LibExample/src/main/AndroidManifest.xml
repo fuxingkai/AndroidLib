@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.infrastructure.lib.example">
+    package="com.basis.lib.example">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name="frank.basis.lib.example.AppApplication"
+        android:name="com.basis.lib.example.AppApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -17,14 +17,13 @@
 
         <meta-data android:name="WX_KEY" android:value="jjjjjj" />
 
-        <activity android:name="frank.basis.lib.example.activity.MainActivity">
+        <activity android:name="com.basis.lib.example.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.BActivity"/>
     </application>
 
 </manifest>

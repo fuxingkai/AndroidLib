@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="frank.basis.lib.ExampleUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-04-11T07:49:54" hostname="MS-20160603XOTO" time="0.001">
-  <properties/>
-  <testcase name="addition_isCorrect" classname="frank.basis.lib.ExampleUnitTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

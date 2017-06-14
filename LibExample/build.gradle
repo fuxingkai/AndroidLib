@@ -46,8 +46,9 @@ android {
 }
 
 dependencies {
-    compile project(':library')
+//    compile project(':library')
     compile 'com.google.dagger:dagger:2.4'
+    compile 'frank.basis.library:library:1.0.1'
     apt 'com.google.dagger:dagger-compiler:2.4'
 //    compile "cn.jufuns:androidlib:$rootProject.ext.androidlib_version"
 }
